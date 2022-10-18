@@ -137,9 +137,9 @@ def get_money_value(message):
 
 
 @server.route('/' + TOKEN, methods=['POST'])
-async def getMessage():
-    json_string = await request.get_data().decode('utf-8')
-    update = await telebot.types.Update.de_json(json_string)
+def getMessage():
+    json_string = request.get_data().decode('utf-8')
+    update = telebot.types.Update.de_json(json_string)
     bot.process_new_updates([update])
     return "!", 200
 
