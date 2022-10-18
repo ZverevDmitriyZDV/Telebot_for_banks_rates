@@ -71,7 +71,7 @@ def buy_rub_knowing_thb(value, rate):
     return value * rate
 
 
-bot = telegram.Bot(token=os.environ["YOURAPIKEY"])
+
 
 
 @bot.message_handler(commands=['info'])
@@ -155,7 +155,9 @@ def get_money_value(message):
 
 @app.route("/", methods=['GET', 'POST'])
 def webhook():
+    bot = telegram.Bot(token=os.environ["YOURAPIKEY"])
     if request.method == "POST":
+
         update = telegram.Update.de_json(request.get_json(force=True), bot)
 
         return 'ok'
