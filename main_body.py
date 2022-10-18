@@ -140,7 +140,7 @@ def get_money_value(message):
 async def getMessage():
     json_string = await request.get_data().decode('utf-8')
     update = await telebot.types.Update.de_json(json_string)
-    await bot.process_new_updates([update])
+    bot.process_new_updates([update])
     return "!", 200
 
 
