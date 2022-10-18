@@ -276,49 +276,47 @@ def handle_rate_message(message):
     bot.send_message(message.from_user.id, f'!!!!!!Enter yor rate or skip!!!!!!!')
     bot.register_next_step_handler(message, handle_message)
 
-
-def handle_message(message):
-    global rate
-    try:
-        value_rate = message.text.upper()
-        value_rate = re.search(r"\d+\.?\d*", value_rate)
-        rate = float(value_rate.group(0))
-    except:
-        rate, message_out = get_exchange_rub_thb(all=False)
-    bot.send_message(message.from_user.id, f'Ready to convert with rate {rate}\n'
-                                           f'Enter amount of money with THB ot RUB in the end')
-    bot.register_next_step_handler(message, get_money_value)
-
-
-def get_money_value(message):
-    value = message.text.upper()
-    if value == "END":
-        bot.send_message(message.from_user.id, f'Я сделяль')
-        bot.clear_step_handler_by_chat_id(chat_id=message.chat.id)
-        return
-
-    input_value = re.search(r"^(?P<value>\d+)(?P<name>(THB|RUB|))$", value)
-
-    if input_value is None:
-        bot.send_message(message.from_user.id, f'Некорректный ввод')
+    def handle_message(message):
+        global rate
+        try:
+            value_rate = message.text.upper()
+            value_rate = re.search(r"\d+\.?\d*", value_rate)
+            rate = float(value_rate.group(0))
+        except:
+            rate, message_out = get_exchange_rub_thb(all=False)
+        bot.send_message(message.from_user.id, f'Ready to convert with rate {rate}\n'
+                                               f'Enter amount of money with THB ot RUB in the end')
         bot.register_next_step_handler(message, get_money_value)
-        return
 
-    value_money = input_value.group('value')
-    name_money = input_value.group('name')
+    def get_money_value(message):
+        value = message.text.upper()
+        if value == "END":
+            bot.send_message(message.from_user.id, f'Я сделяль')
+            bot.clear_step_handler_by_chat_id(chat_id=message.chat.id)
+            return
 
-    value_money = 0 if value_money is None else int(value_money)
+        input_value = re.search(r"^(?P<value>\d+)(?P<name>(THB|RUB|))$", value)
 
-    if name_money == 'RUB' or name_money == '':
-        message_out = f"I will convert RUB to THB\n" \
-                      f"{value_money}RUB = {round(value_money / rate, 2)}THB"
-    else:
-        message_out = f"I will convert THB to RUB\n" \
-                      f"{value_money}THB = {round(value_money * rate, 2)}RUB"
+        if input_value is None:
+            bot.send_message(message.from_user.id, f'Некорректный ввод')
+            bot.register_next_step_handler(message, get_money_value)
+            return
 
-    bot.send_message(message.from_user.id, message_out)
+        value_money = input_value.group('value')
+        name_money = input_value.group('name')
 
-    bot.register_next_step_handler(message, get_money_value)
+        value_money = 0 if value_money is None else int(value_money)
+
+        if name_money == 'RUB' or name_money == '':
+            message_out = f"I will convert RUB to THB\n" \
+                          f"{value_money}RUB = {round(value_money / rate, 2)}THB"
+        else:
+            message_out = f"I will convert THB to RUB\n" \
+                          f"{value_money}THB = {round(value_money * rate, 2)}RUB"
+
+        bot.send_message(message.from_user.id, message_out)
+
+        bot.register_next_step_handler(message, get_money_value)
 
 
 # @bot.message_handler(commands=['start'])
@@ -344,7 +342,6 @@ def webhook():
     bot.remove_webhook()
     bot.set_webhook(url='https://testbotherokuzdv.herokuapp.com/' + TOKEN)
     return "!", 200
-
 
 # if __name__ == "__main__":
 #     server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
