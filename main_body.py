@@ -106,13 +106,13 @@ def handle_message(message):
 
 
 def get_money_value(message):
-    value = message.text.upper()
-    if value == "END":
+    value = message.text
+    if value.upper() == "END":
         bot.send_message(message.from_user.id, f'Я сделяль')
         bot.clear_step_handler_by_chat_id(chat_id=message.chat.id)
         return
 
-    input_value = re.search(r"^(?P<value>\d+)(?P<name>(THB|RUB|))$", value)
+    input_value = re.search(r"^(?P<value>\d+)(?P<name>(THB|RUB|))$", value.upper())
 
     if input_value is None:
         bot.send_message(message.from_user.id, f'Некорректный ввод')
@@ -147,7 +147,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://testbotherokuzdv.herokuapp.com/' + TOKEN)
+    bot.set_webhook(url=os.environ["URL_HEROKU"] + TOKEN)
     return "!", 200
 
 # if __name__ == "__main__":
