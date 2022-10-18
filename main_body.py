@@ -145,9 +145,9 @@ async def getMessage():
 
 
 @server.route("/")
-async def webhook():
+def webhook():
     bot.remove_webhook()
-    await bot.set_webhook(url='https://testbotherokuzdv.herokuapp.com/' + TOKEN)
+    bot.set_webhook(url='https://testbotherokuzdv.herokuapp.com/' + TOKEN)
     return "!", 200
 
 # if __name__ == "__main__":
