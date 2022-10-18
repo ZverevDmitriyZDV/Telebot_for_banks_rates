@@ -171,8 +171,10 @@ import os
 from flask import Flask, request
 
 import telebot
+
 TOKEN = os.environ["YOURAPIKEY"]
-bot = telegram.Bot(token=TOKEN)
+
+bot = telebot.TeleBot(token=TOKEN)
 
 server = Flask(__name__)
 
