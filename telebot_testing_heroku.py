@@ -167,6 +167,7 @@
 # def index():
 #     return webhook()
 import os
+import re
 
 from flask import Flask, request
 
@@ -291,7 +292,7 @@ def handle_message(message):
     bot.register_next_step_handler(message, get_money_value)
 
 
-# @bot.message_handler()
+@bot.message_handler()
 def get_money_value(message):
     value = message.text.upper()
     if value == "END":
