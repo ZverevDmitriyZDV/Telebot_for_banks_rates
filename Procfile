@@ -1,0 +1,1 @@
+web: gunicorn telebot_testing_heroku:app
