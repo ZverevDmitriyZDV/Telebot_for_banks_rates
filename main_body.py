@@ -1,6 +1,5 @@
 import os
 import re
-
 from flask import Flask, request
 from bangkok_request import get_bangkok_usd_rate_inner
 from tinkoff_request import get_rate_usd
@@ -138,17 +137,17 @@ def get_money_value(message):
 
 
 @server.route('/' + TOKEN, methods=['POST'])
-def getMessage():
-    json_string = request.get_data().decode('utf-8')
-    update = telebot.types.Update.de_json(json_string)
-    bot.process_new_updates([update])
+async def getMessage():
+    json_string = await request.get_data().decode('utf-8')
+    update = await telebot.types.Update.de_json(json_string)
+    await bot.process_new_updates([update])
     return "!", 200
 
 
 @server.route("/")
-def webhook():
+async def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://testbotherokuzdv.herokuapp.com/' + TOKEN)
+    await bot.set_webhook(url='https://testbotherokuzdv.herokuapp.com/' + TOKEN)
     return "!", 200
 
 # if __name__ == "__main__":
