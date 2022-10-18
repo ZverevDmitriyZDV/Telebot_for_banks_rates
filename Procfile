@@ -1,1 +1,1 @@
-web: gunicorn telebot_testing_heroku:app
+web: gunicorn telebot_testing_heroku:server
