@@ -1,15 +1,21 @@
 import requests
 import datetime
 import os
+from dotenv import load_dotenv
+
+# creating the .env file path
+dotenv_path = os.path.abspath('.env')
+# load our .env file from the path
+load_dotenv(dotenv_path)
 
 TOKEN = os.environ.get('TOKEN_BANGKOK')
-
 HEADERS = {'Ocp-Apim-Subscription-Key': TOKEN, }
 
 
 def get_last_update_rate():
     url = 'https://bbl-sea-apim-p.azure-api.net/api/ExchangeRateService/GetDateTimeLastUpdate'
     response = requests.get(url, headers=HEADERS)
+    print(response.json())
     last_date_update = response.json()[0].get("Day").split('/')
     time_update = response.json()[0].get("Time")
     return dict(

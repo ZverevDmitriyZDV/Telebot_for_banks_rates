@@ -9,15 +9,21 @@ from tinkoff.invest import Client, RequestError, CandleInterval, HistoricCandle
 import pandas as pd
 from tinkoff.invest.utils import now
 import os
+from dotenv import load_dotenv
+
+# creating the .env file path
+dotenv_path = os.path.abspath('.env')
+# load our .env file from the path
+load_dotenv(dotenv_path)
 
 TOKEN = os.environ.get('TOKEN_TINK')
+
+TICKER = 'USD000UTSTOM'
+FIG_USD = 'BBG0013HGFT4'
 
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
-
-TICKER = 'USD000UTSTOM'
-FIG_USD = 'BBG0013HGFT4'
 
 
 def get_figi(figi=None):
