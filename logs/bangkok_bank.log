@@ -1,0 +1,25 @@
+2023-02-17 15:07:50,057 DEBUG:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
+2023-02-17 15:07:50,336 DEBUG:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 401 143
+2023-02-17 15:07:50,338 ERROR:GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-02-17 15:07:50,339 DEBUG:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
+2023-02-17 15:07:50,530 DEBUG:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 401 143
+2023-02-17 15:07:50,532 ERROR:GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-02-17 15:07:50,532 ERROR:INNER VALUE RATES FAILED
+2023-02-17 15:12:24,054 DEBUG:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
+2023-02-17 15:12:24,387 DEBUG:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 401 143
+2023-02-17 15:12:24,389 ERROR:GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-02-17 15:12:24,390 DEBUG:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
+2023-02-17 15:12:24,542 DEBUG:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 401 143
+2023-02-17 15:12:24,546 ERROR:GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-02-17 15:12:36,339 DEBUG:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
+2023-02-17 15:12:36,584 DEBUG:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 200 None
+2023-02-17 15:12:36,588 DEBUG:LAST BANGKOKBANK UPDATE RATE ['17', '02', '2023'] - 12:50     
+2023-02-17 15:12:36,591 DEBUG:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
+2023-02-17 15:12:36,745 DEBUG:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 200 None
+2023-02-17 15:12:36,747 DEBUG:LAST BANGKOKBANK UPDATE RATE ['17', '02', '2023'] - 12:50     
+2023-02-17 15:12:36,749 DEBUG:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
+2023-02-17 15:12:36,909 DEBUG:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/Getfxfamily HTTP/1.1" 200 None
+2023-02-17 15:12:36,912 DEBUG:FAMILY FOR US Dollar 50-100 HAS BEEN RECEIVED: USD50
+2023-02-17 15:12:36,914 DEBUG:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
+2023-02-17 15:12:37,060 DEBUG:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetChartfxrates/17/02/2023/17/2/2023/USD50/en HTTP/1.1" 200 357
+2023-02-17 15:12:37,063 DEBUG:T-T RATE LAST UPDATE 34.37     
