@@ -1,45 +1,4 @@
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
-DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 200 None
-DEBUG:root:LAST BANGKOKBANK UPDATE RATE ['20', '02', '2023'] - 09:30     
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
-DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/Getfxfamily HTTP/1.1" 200 None
-DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
-   Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-3     GBP      Pound Sterling
-4     EUR                Euro
-5     JPY        Japanese Yen
-6     HKD    Hong Kong Dollar
-7     MYR   Malaysian Ringgit
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-10    CNY        Chinese Yuan
-11    IDR   Indonesian Rupiah
-12    MMK        Myanmar Kyat
-13    INR        Indian Rupee
-14    KRW          Korean Won
-15    LAK            Laos Kip
-16    PHP     Philippine Peso
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-20    CHF         Swiss Franc
-21    DKK        Danish Krone
-22    NOK     Norwegian Krone
-23    SEK       Swedish Krona
-24    CAD     Canadian Dollar
-25    RUB        Russia Ruble
-26    VND        Vietnam Dong
-27    ZAR   South Africa Rand
-28    AED          UAE Dirham
-29    BHD      Bahraini Dinar
-30    OMR          Rial Omani
-31    QAR        Qatari Riyal
-32    SAR         Saudi Riyal
-DEBUG:root:FAMILY FOR US Dollar 50-100 VALUE HAS BEEN RECEIVED: USD50
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
 DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/Getfxfamily HTTP/1.1" 200 None
 DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
    Family         Description
@@ -78,19 +37,16 @@ DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED
 32    SAR         Saudi Riyal
 DEBUG:root:ALL FAMILIES CLOSE TO CURRENSY 
    Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-6     HKD    Hong Kong Dollar
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-24    CAD     Canadian Dollar
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
-DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 200 None
-DEBUG:root:LAST BANGKOKBANK UPDATE RATE ['20', '02', '2023'] - 09:30     
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
 DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/Getfxfamily HTTP/1.1" 200 None
 DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
@@ -130,185 +86,8 @@ DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED
 32    SAR         Saudi Riyal
 DEBUG:root:FAMILY FOR US Dollar 50-100 VALUE HAS BEEN RECEIVED: USD50
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
-DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/Getfxfamily HTTP/1.1" 200 None
-DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
-   Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-3     GBP      Pound Sterling
-4     EUR                Euro
-5     JPY        Japanese Yen
-6     HKD    Hong Kong Dollar
-7     MYR   Malaysian Ringgit
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-10    CNY        Chinese Yuan
-11    IDR   Indonesian Rupiah
-12    MMK        Myanmar Kyat
-13    INR        Indian Rupee
-14    KRW          Korean Won
-15    LAK            Laos Kip
-16    PHP     Philippine Peso
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-20    CHF         Swiss Franc
-21    DKK        Danish Krone
-22    NOK     Norwegian Krone
-23    SEK       Swedish Krona
-24    CAD     Canadian Dollar
-25    RUB        Russia Ruble
-26    VND        Vietnam Dong
-27    ZAR   South Africa Rand
-28    AED          UAE Dirham
-29    BHD      Bahraini Dinar
-30    OMR          Rial Omani
-31    QAR        Qatari Riyal
-32    SAR         Saudi Riyal
-DEBUG:root:ALL FAMILIES CLOSE TO CURRENSY 
-   Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-6     HKD    Hong Kong Dollar
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-24    CAD     Canadian Dollar
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
 DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 200 None
 DEBUG:root:LAST BANGKOKBANK UPDATE RATE ['20', '02', '2023'] - 09:30     
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
-DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/Getfxfamily HTTP/1.1" 200 None
-DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
-   Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-3     GBP      Pound Sterling
-4     EUR                Euro
-5     JPY        Japanese Yen
-6     HKD    Hong Kong Dollar
-7     MYR   Malaysian Ringgit
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-10    CNY        Chinese Yuan
-11    IDR   Indonesian Rupiah
-12    MMK        Myanmar Kyat
-13    INR        Indian Rupee
-14    KRW          Korean Won
-15    LAK            Laos Kip
-16    PHP     Philippine Peso
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-20    CHF         Swiss Franc
-21    DKK        Danish Krone
-22    NOK     Norwegian Krone
-23    SEK       Swedish Krona
-24    CAD     Canadian Dollar
-25    RUB        Russia Ruble
-26    VND        Vietnam Dong
-27    ZAR   South Africa Rand
-28    AED          UAE Dirham
-29    BHD      Bahraini Dinar
-30    OMR          Rial Omani
-31    QAR        Qatari Riyal
-32    SAR         Saudi Riyal
-DEBUG:root:FAMILY FOR US Dollar 50-100 VALUE HAS BEEN RECEIVED: USD50
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
-DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/Getfxfamily HTTP/1.1" 200 None
-DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
-   Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-3     GBP      Pound Sterling
-4     EUR                Euro
-5     JPY        Japanese Yen
-6     HKD    Hong Kong Dollar
-7     MYR   Malaysian Ringgit
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-10    CNY        Chinese Yuan
-11    IDR   Indonesian Rupiah
-12    MMK        Myanmar Kyat
-13    INR        Indian Rupee
-14    KRW          Korean Won
-15    LAK            Laos Kip
-16    PHP     Philippine Peso
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-20    CHF         Swiss Franc
-21    DKK        Danish Krone
-22    NOK     Norwegian Krone
-23    SEK       Swedish Krona
-24    CAD     Canadian Dollar
-25    RUB        Russia Ruble
-26    VND        Vietnam Dong
-27    ZAR   South Africa Rand
-28    AED          UAE Dirham
-29    BHD      Bahraini Dinar
-30    OMR          Rial Omani
-31    QAR        Qatari Riyal
-32    SAR         Saudi Riyal
-DEBUG:root:ALL FAMILIES CLOSE TO CURRENSY 
-   Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-6     HKD    Hong Kong Dollar
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-24    CAD     Canadian Dollar
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
-DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 200 None
-DEBUG:root:LAST BANGKOKBANK UPDATE RATE ['20', '02', '2023'] - 09:30     
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
-DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/Getfxfamily HTTP/1.1" 200 None
-DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
-   Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-3     GBP      Pound Sterling
-4     EUR                Euro
-5     JPY        Japanese Yen
-6     HKD    Hong Kong Dollar
-7     MYR   Malaysian Ringgit
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-10    CNY        Chinese Yuan
-11    IDR   Indonesian Rupiah
-12    MMK        Myanmar Kyat
-13    INR        Indian Rupee
-14    KRW          Korean Won
-15    LAK            Laos Kip
-16    PHP     Philippine Peso
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-20    CHF         Swiss Franc
-21    DKK        Danish Krone
-22    NOK     Norwegian Krone
-23    SEK       Swedish Krona
-24    CAD     Canadian Dollar
-25    RUB        Russia Ruble
-26    VND        Vietnam Dong
-27    ZAR   South Africa Rand
-28    AED          UAE Dirham
-29    BHD      Bahraini Dinar
-30    OMR          Rial Omani
-31    QAR        Qatari Riyal
-32    SAR         Saudi Riyal
-DEBUG:root:FAMILY FOR US Dollar 50-100 VALUE HAS BEEN RECEIVED: USD50
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
 DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetChartfxrates/20/02/2023/20/2/2023/USD50/en HTTP/1.1" 200 276
 DEBUG:root:T-T RATE LAST UPDATE 34.18     
@@ -351,19 +130,16 @@ DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED
 32    SAR         Saudi Riyal
 DEBUG:root:ALL FAMILIES CLOSE TO CURRENSY 
    Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-6     HKD    Hong Kong Dollar
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-24    CAD     Canadian Dollar
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
-DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 200 None
-DEBUG:root:LAST BANGKOKBANK UPDATE RATE ['20', '02', '2023'] - 09:30     
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
 DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/Getfxfamily HTTP/1.1" 200 None
 DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
@@ -402,6 +178,9 @@ DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED
 31    QAR        Qatari Riyal
 32    SAR         Saudi Riyal
 DEBUG:root:FAMILY FOR US Dollar 50-100 VALUE HAS BEEN RECEIVED: USD50
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
+DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 200 None
+DEBUG:root:LAST BANGKOKBANK UPDATE RATE ['20', '02', '2023'] - 09:30     
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
 DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetChartfxrates/20/02/2023/20/2/2023/USD50/en HTTP/1.1" 200 276
 DEBUG:root:T-T RATE LAST UPDATE 34.18     
@@ -444,19 +223,16 @@ DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED
 32    SAR         Saudi Riyal
 DEBUG:root:ALL FAMILIES CLOSE TO CURRENSY 
    Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-6     HKD    Hong Kong Dollar
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-24    CAD     Canadian Dollar
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
-DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 200 None
-DEBUG:root:LAST BANGKOKBANK UPDATE RATE ['20', '02', '2023'] - 09:30     
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
 DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/Getfxfamily HTTP/1.1" 200 None
 DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
@@ -496,54 +272,8 @@ DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED
 32    SAR         Saudi Riyal
 DEBUG:root:FAMILY FOR US Dollar 50-100 VALUE HAS BEEN RECEIVED: USD50
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
+DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetDateTimeLastUpdate HTTP/1.1" 200 None
+DEBUG:root:LAST BANGKOKBANK UPDATE RATE ['20', '02', '2023'] - 09:30     
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
 DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/GetChartfxrates/20/02/2023/20/2/2023/USD50/en HTTP/1.1" 200 276
 DEBUG:root:T-T RATE LAST UPDATE 34.18     
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bbl-sea-apim-p.azure-api.net:443
-DEBUG:urllib3.connectionpool:https://bbl-sea-apim-p.azure-api.net:443 "GET /api/ExchangeRateService/Getfxfamily HTTP/1.1" 200 None
-DEBUG:root:ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
-   Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-3     GBP      Pound Sterling
-4     EUR                Euro
-5     JPY        Japanese Yen
-6     HKD    Hong Kong Dollar
-7     MYR   Malaysian Ringgit
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-10    CNY        Chinese Yuan
-11    IDR   Indonesian Rupiah
-12    MMK        Myanmar Kyat
-13    INR        Indian Rupee
-14    KRW          Korean Won
-15    LAK            Laos Kip
-16    PHP     Philippine Peso
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-20    CHF         Swiss Franc
-21    DKK        Danish Krone
-22    NOK     Norwegian Krone
-23    SEK       Swedish Krona
-24    CAD     Canadian Dollar
-25    RUB        Russia Ruble
-26    VND        Vietnam Dong
-27    ZAR   South Africa Rand
-28    AED          UAE Dirham
-29    BHD      Bahraini Dinar
-30    OMR          Rial Omani
-31    QAR        Qatari Riyal
-32    SAR         Saudi Riyal
-DEBUG:root:ALL FAMILIES CLOSE TO CURRENSY 
-   Family         Description
-0    USD1       US Dollar 1-2
-1    USD5      US Dollar 5-20
-2   USD50    US Dollar 50-100
-6     HKD    Hong Kong Dollar
-8     SGD    Singapore Dollar
-9     BND       Brunei Dollar
-17    TWD       Taiwan Dollar
-18    AUD   Australian Dollar
-19    NZD  New Zealand Dollar
-24    CAD     Canadian Dollar

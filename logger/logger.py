@@ -9,4 +9,4 @@ class Zlogger:
         logging.basicConfig(level=logging.DEBUG, filename=f'logs/{self.filename}.log')
 
     def logger_format(self):
-        logging.basicConfig(format='%(asctime)s %(levelname)s:%(message)s')
+        logging.basicConfig(format='%(asctime)s %(clientip)-15s:%(message)s')
