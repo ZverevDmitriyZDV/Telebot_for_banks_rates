@@ -11,12 +11,14 @@ from tinkoff.invest.utils import now
 import os
 from dotenv import load_dotenv
 import logging
+from logger.logger import Zlogger
 
 dotenv_path = os.path.abspath('.env')
 load_dotenv(dotenv_path)
-logging.basicConfig(level=logging.DEBUG, filename='logs/tinkoff_logs.log',
-                    format='%(asctime)s %(levelname)s:%(message)s')
 
+tnk_logger = Zlogger('tinkoff_logs')
+tnk_logger.logger_config()
+tnk_logger.logger_format()
 TOKEN = os.environ.get('TOKEN_TINK')
 
 TICKER = 'USD000UTSTOM'
@@ -128,4 +130,6 @@ def cast_money(v):
 
 
 if __name__ == '__main__':
-    get_figi()
+    gf = get_figi()
+    usd_figi = gf[gf['ticker'].str.match("(US4).*")==True]
+    print(usd_figi)
