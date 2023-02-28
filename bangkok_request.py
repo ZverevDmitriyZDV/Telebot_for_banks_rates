@@ -194,7 +194,8 @@ class BKKBClient:
         # форматирование значение по нижнему регистру для предотвращения опечаток
         data_frame['Description'] = data_frame['Description'].str.lower()
         # фильтрация данных по требуемому ключевому значению
-        format_families_by_reg = data_frame[data_frame['Description'].str.match(f"((.*)({reg_currency.lower()}).*)") == True]
+        format_families_by_reg = data_frame[
+            data_frame['Description'].str.match(f"((.*)({reg_currency.lower()}).*)") == True]
         # запись логов удачного результат
         logging.debug('ALL FAMILIES CLOSE TO CURRENSY \n%s', format_families_by_reg)
         return format_families_by_reg
@@ -219,27 +220,45 @@ class BKKBClient:
         # выбираем необходимые данные их полученного HTTPResponse объекта
         data_needed = response.json()[-1]
         date = data_needed.get('Ddate').split('/')
-        result_dict_x_rate = dict(
-            tt_rate=data_needed.get(rate_info),
-            date=f"{date[1]}/{date[0]}/{date[2]}",
-            time=data_needed.get('DTime')
-        )
+
+        tt_rate = data_needed.get(rate_info)
+        date = f"{date[1]}/{date[0]}/{date[2]}"
+        time = data_needed.get('DTime')
         # запись логов удачного результат
-        logging.debug('T-T RATE LAST UPDATE %s', result_dict_x_rate['tt_rate'])
-        return result_dict_x_rate
+        logging.debug('T-T RATE LAST UPDATE %s', tt_rate)
+        message_in = f"THB         : {tt_rate}\n" \
+                     f"Update: {time} {date}\n" \
+                     f"\n"
+        return tt_rate, message_in
+
+
+class LastUSDToTHBRates:
+
+    def __init__(self):
+        # объявление клиента
+        self.client = BKKBClient('TOKEN_BANGKOK')
+
+    def get_usd_to_thb_rates(self):
+        family = 'USD50'
+        # определяем дату последнего обновления котировок
+        time_update_date = self.client.format_update_data()
+        # определяем курс обмена валюты USD в THB для внутреннго клиента банка
+        return self.client.format_get_x_rate(time_update_date, family)
 
 
 if __name__ == '__main__':
-    # объявление киента
-    client = BKKBClient('TOKEN_BANGKOK')
-    # поиск возможных совпадений
-    usd_family = client.format_get_close_families_by_reg_name('Dollar')
-    # поиск семейства для USD
-    family = client.format_get_family_by_currency('US Dollar 50-100')
-    # определяем дату последнего обновления котировок
-    time_update_date = client.format_update_data()
-    # определяем курс обмена валюты USD в THB для внутреннго клиента банка
-    usd_thb = client.format_get_x_rate(time_update_date,family)
+    # # объявление киента
+    # client = BKKBClient('TOKEN_BANGKOK')
+    # # поиск возможных совпадений
+    # usd_family = client.format_get_close_families_by_reg_name('Dollar')
+    # # поиск семейства для USD
+    # family = client.format_get_family_by_currency('US Dollar 50-100')
+    # # определяем дату последнего обновления котировок
+    # time_update_date = client.format_update_data()
+    # # определяем курс обмена валюты USD в THB для внутреннго клиента банка
+    # usd_thb, message = client.format_get_x_rate(time_update_date, family)
+    thb_rate = LastUSDToTHBRates()
+    print(thb_rate.get_usd_to_thb_rates())
 
 # референс старая версия
 # def get_last_update_rate():
