@@ -1,52 +1,66 @@
 import os
 import re
+
+from dotenv import load_dotenv
 from flask import Flask, request
-from bangkok_request import get_bangkok_usd_rate_inner
-from tinkoff_request import get_rate_usd
+from bangkok_request import LastUSDToTHBRates
+from tinkoff_request import LastUSDToRUBRates
 import telebot
-
-TOKEN = os.environ["TELEBOT"]
-bot = telebot.TeleBot(token=TOKEN)
-server = Flask(__name__)
+from bangkok_request import BankAPI
 
 
-def get_exchange_rub_thb(all: object = True):
-    usd_rate, message_in = get_usd_rub()
-    thb_rate, message_in_2 = get_thb_usd()
-    rub_thb, rub_thb_zdv = get_thb_rub_rate(usd_rate, thb_rate)
-    message_in_out = f"RUB / THB   : {rub_thb}\n" \
-                     f"RUB / THB*  : {rub_thb_zdv}" \
-                     f"\n"
-
-    message_in_out = message_in + message_in_2 + message_in_out if all else message_in_out
-
-    return rub_thb_zdv, message_in_out
-
-
-def get_thb_rub_rate(usd_rate, thb_usd_rate, swift=3.0, thb_exange=0.21, raif_exgande=2.257):
-    thb_rub = float(thb_usd_rate) / float(usd_rate) * (1 - raif_exgande / 100) * (1 - swift / 100) * (
-            1 - thb_exange / 100)
-    rub_thb = round(1 / thb_rub, 2)
-    rub_thb_zdv = round(rub_thb * 1.02, 2)
-    return rub_thb, rub_thb_zdv
+# class ZDVTelebot(BankAPI):
+#     def __init__(self, token_name):
+#         self.token = token_name
+#
+#     def get_token(self):
+#         load_dotenv(os.path.abspath('.env'))
+#         return os.environ.get(self.token_name)
+#
+#     def get(self):
+#         bot = telebot.TeleBot(token=self.get_token())
 
 
-def get_usd_rub():
-    data_message = get_rate_usd()
-    usd_rate = data_message.get("max_rate_with_ema")
-    message_in = f"USD   : {data_message.get('max_rate')}\n" \
-                 f"USD ema: {usd_rate}\n" \
-                 f"Update : {data_message.get('time')}\n" \
-                 f"\n"
-    return usd_rate, message_in
+class ExchangeConvertor:
+    """
+    класс для определения конверсии из RUB в THB с учетом и без учета комиссии
+    """
 
+    def __init__(self):
+        """
+        метод инициализации, в котором определяем текущие котировки валют
+        """
+        self.usd_rub = 0
+        self.usd_rub_message = ''
+        self.usd_thb = 0
+        self.usd_thb_message = ''
 
-def get_thb_usd():
-    thb_rate = get_bangkok_usd_rate_inner()
-    message_in = f"THB         : {thb_rate.get('tt_rate')}\n" \
-                 f"Update: {thb_rate.get('time')} {thb_rate.get('date')}\n" \
-                 f"\n"
-    return thb_rate.get('tt_rate'), message_in
+    def get_usd_rub_data(self):
+        self.usd_rub, self.usd_rub_message = LastUSDToRUBRates().get_usd_last_rate()
+        return True
+
+    def get_usd_thb_data(self):
+
+        self.usd_thb, self.usd_thb_message = LastUSDToTHBRates().get_usd_to_thb_rates()
+        return True
+
+    def get_thb_rub_rate(self, swift=3.0, thb_exange=0.21, raif_exgande=2.257):
+        if self.usd_thb == 0:
+            self.get_usd_thb_data()
+        if self.usd_rub == 0:
+            self.get_usd_rub_data()
+        thb_rub = float(self.usd_thb) / float(self.usd_rub) * (1 - raif_exgande / 100) * (1 - swift / 100) * (
+                1 - thb_exange / 100)
+        rub_thb = round(1 / thb_rub, 2)
+        rub_thb_zdv = round(rub_thb * 1.02, 2)
+        return rub_thb, rub_thb_zdv
+
+    def get_exchange_message_rub_thb(self):
+        rub_thb, rub_thb_zdv = self.get_thb_rub_rate()
+        message_out = f"RUB / THB   : {rub_thb}\n" \
+                      f"RUB / THB*  : {rub_thb_zdv}" \
+                      f"\n"
+        return rub_thb_zdv, message_out
 
 
 def buy_rub_knowing_rub(value, rate):
@@ -57,32 +71,47 @@ def buy_rub_knowing_thb(value, rate):
     return value * rate
 
 
+# exchange = ExchangeConvertor()
+# print(exchange.usd_rub)
+# print(exchange.usd_thb)
+# print(exchange.usd_rub_message)
+# print(exchange.usd_thb_message)
+# print(exchange.get_exchange_message_rub_thb())
+
+# TOKEN = os.environ["TELEBOT"]
+load_dotenv(os.path.abspath('.env'))
+TOKEN = os.environ.get('TELEBOT')
+bot = telebot.TeleBot(token=TOKEN)
+server = Flask(__name__)
+
+
 @bot.message_handler(commands=['info'])
 def send_all_info(message):
-    rate, message_out = get_exchange_rub_thb(all=True)
-    bot.send_message(message.from_user.id, message_out)
+    bot_bank_connect = ExchangeConvertor()
+    rate, message_out = bot_bank_connect.get_exchange_message_rub_thb()
+    bot.send_message(message.from_user.id, bot_bank_connect.usd_rub_message + bot_bank_connect.usd_thb_message + message_out)
 
 
 @bot.message_handler(commands=['test'])
-def send_all_info(message):
-    bot.send_message(message.from_user.id, 'test2')
+def send_test_message(message):
+    bot.send_message(message.from_user.id, 'test_response')
 
 
 @bot.message_handler(commands=['usd'])
 def send_usd_rate(message):
-    usd_rate, message_in = get_usd_rub()
+    usd_rate, message_in = ExchangeConvertor().get_usd_rub_data()
     bot.send_message(message.from_user.id, message_in)
 
 
 @bot.message_handler(commands=['thb'])
 def send_thb_rate(message):
-    thb_rate, message_in = get_thb_usd()
+    thb_rate, message_in = ExchangeConvertor().get_usd_thb_data()
     bot.send_message(message.from_user.id, message_in)
 
 
 @bot.message_handler(commands=['%'])
 def send_commission_only(message):
-    rate, message_in_out = get_exchange_rub_thb(all=False)
+    rate, message_in_out = ExchangeConvertor().get_exchange_message_rub_thb()
     bot.send_message(message.from_user.id, message_in_out)
 
 
@@ -99,23 +128,23 @@ def handle_message(message):
         value_rate = re.search(r"\d+\.?\d*", value_rate)
         rate = float(value_rate.group(0))
     except:
-        rate, message_out = get_exchange_rub_thb(all=False)
+        rate, message_out = ExchangeConvertor().get_exchange_message_rub_thb()
     bot.send_message(message.from_user.id, f'Ready to convert with rate {rate}\n'
-                                           f'Enter amount of money with THB ot RUB in the end')
+                                           f'Enter amount of money with THB to RUB in the end')
     bot.register_next_step_handler(message, get_money_value)
 
 
 def get_money_value(message):
     value = message.text
     if value.upper() == "END":
-        bot.send_message(message.from_user.id, f'Я сделяль')
+        bot.send_message(message.from_user.id, f'Exchange operation have been done')
         bot.clear_step_handler_by_chat_id(chat_id=message.chat.id)
         return
 
     input_value = re.search(r"^(?P<value>\d+)(?P<name>(THB|RUB|))$", value.upper())
 
     if input_value is None:
-        bot.send_message(message.from_user.id, f'Некорректный ввод')
+        bot.send_message(message.from_user.id, f'Incorrect Input')
         bot.register_next_step_handler(message, get_money_value)
         return
 
@@ -147,8 +176,9 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url=os.environ["URL_HEROKU"] + TOKEN)
+    bot.set_webhook(url=os.environ.get["URL_HEROKU"] + TOKEN)
     return "!", 200
 
-# if __name__ == "__main__":
-#     server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+
+if __name__ == "__main__":
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
