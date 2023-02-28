@@ -36,26 +36,53 @@ class ExchangeConvertor:
         self.usd_thb_message = ''
 
     def get_usd_rub_data(self):
+        """
+        метод определения курса обмена покупка USD за RUB, через Тинькофф банк
+        и получение текстового сообщения о дополнительных деталях
+        :return: -> float() , str() значение курса, строку с дополнительной информацией
+        """
+        if self.usd_rub != 0:
+            return True
         self.usd_rub, self.usd_rub_message = LastUSDToRUBRates().get_usd_last_rate()
         return True
 
     def get_usd_thb_data(self):
-
+        """
+        метод обмена валюты продажа USD за THB, через  Bangkok Bank
+        И получечние текстового сообщения о дополнительной информации
+        :return: -> float() , str() значение курса, строку с дополнительной информацией
+        """
+        if self.usd_thb != 0 and self.usd_thb_message != '':
+            return True
         self.usd_thb, self.usd_thb_message = LastUSDToTHBRates().get_usd_to_thb_rates()
         return True
 
     def get_thb_rub_rate(self, swift=3.0, thb_exange=0.21, raif_exgande=2.257):
+        """
+        метод определения обмена валюты RUB в THB
+        :param swift: -> float() комиссия банка Райфайзен за Swift перевод
+        :param thb_exange: -> float() комиссия банка BangkokBank за прием Swfit перевода и операции пополнения счета
+        :param raif_exgande: -> float() комиссия броке Райфайзен банка за совершение брокерской операции
+        :return: -> float() , float() значение курса, значение курса с комиссией
+        """
+        # проверка ненулевых значений котировок, для просчета курса обмена
         if self.usd_thb == 0:
             self.get_usd_thb_data()
         if self.usd_rub == 0:
             self.get_usd_rub_data()
+        # формула расчета конверсии 1 RUB в THB
         thb_rub = float(self.usd_thb) / float(self.usd_rub) * (1 - raif_exgande / 100) * (1 - swift / 100) * (
                 1 - thb_exange / 100)
+        # формула обмена 1 THB к RUB
         rub_thb = round(1 / thb_rub, 2)
         rub_thb_zdv = round(rub_thb * 1.02, 2)
         return rub_thb, rub_thb_zdv
 
     def get_exchange_message_rub_thb(self):
+        """
+        метод определяющий финальное сообщение значения обмена 1 THB к RUB
+        :return: -> float() , str() значение курса, строку с дополнительной информацией
+        """
         rub_thb, rub_thb_zdv = self.get_thb_rub_rate()
         message_out = f"RUB / THB   : {rub_thb}\n" \
                       f"RUB / THB*  : {rub_thb_zdv}" \
@@ -71,25 +98,19 @@ def buy_rub_knowing_thb(value, rate):
     return value * rate
 
 
-# exchange = ExchangeConvertor()
-# print(exchange.usd_rub)
-# print(exchange.usd_thb)
-# print(exchange.usd_rub_message)
-# print(exchange.usd_thb_message)
-# print(exchange.get_exchange_message_rub_thb())
-
-# TOKEN = os.environ["TELEBOT"]
 load_dotenv(os.path.abspath('.env'))
 TOKEN = os.environ.get('TELEBOT')
 bot = telebot.TeleBot(token=TOKEN)
 server = Flask(__name__)
 
+bot_bank_connect = ExchangeConvertor()
+
 
 @bot.message_handler(commands=['info'])
 def send_all_info(message):
-    bot_bank_connect = ExchangeConvertor()
     rate, message_out = bot_bank_connect.get_exchange_message_rub_thb()
-    bot.send_message(message.from_user.id, bot_bank_connect.usd_rub_message + bot_bank_connect.usd_thb_message + message_out)
+    bot.send_message(message.from_user.id,
+                     bot_bank_connect.usd_rub_message + bot_bank_connect.usd_thb_message + message_out)
 
 
 @bot.message_handler(commands=['test'])
@@ -99,19 +120,21 @@ def send_test_message(message):
 
 @bot.message_handler(commands=['usd'])
 def send_usd_rate(message):
-    usd_rate, message_in = ExchangeConvertor().get_usd_rub_data()
+    bot_bank_connect.get_usd_rub_data()
+    usd_rate, message_in = bot_bank_connect.usd_rub, bot_bank_connect.usd_rub_message
     bot.send_message(message.from_user.id, message_in)
 
 
 @bot.message_handler(commands=['thb'])
 def send_thb_rate(message):
-    thb_rate, message_in = ExchangeConvertor().get_usd_thb_data()
+    bot_bank_connect.get_usd_thb_data()
+    thb_rate, message_in = bot_bank_connect.usd_thb, bot_bank_connect.usd_thb_message
     bot.send_message(message.from_user.id, message_in)
 
 
 @bot.message_handler(commands=['%'])
 def send_commission_only(message):
-    rate, message_in_out = ExchangeConvertor().get_exchange_message_rub_thb()
+    rate, message_in_out = bot_bank_connect.get_exchange_message_rub_thb()
     bot.send_message(message.from_user.id, message_in_out)
 
 
@@ -165,6 +188,11 @@ def get_money_value(message):
     bot.register_next_step_handler(message, get_money_value)
 
 
+bot.delete_webhook()
+
+
+# bot.infinity_polling()
+
 @server.route('/' + TOKEN, methods=['POST'])
 def getMessage():
     json_string = request.get_data().decode('utf-8')
@@ -176,9 +204,9 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url=os.environ.get["URL_HEROKU"] + TOKEN)
+    bot.set_webhook(url=f"{os.environ.get['URL_HEROKU']}/" + TOKEN)
     return "!", 200
 
 
-# if __name__ == "__main__":
-#     server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+if __name__ == "__main__":
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
