@@ -200,7 +200,7 @@ class CandlesDataFrame:
         """
         candles_df_data = self.create_df()
         candles_df_data['ema'] = ema_indicator(close=candles_df_data['close'], window=9)
-        logging.debug('RATES HAVE BEEN RECEIVED : \n %s', candles_df_data)
+        logging.debug('RATES HAVE BEEN RECEIVED')
         return candles_df_data[['time', 'open', 'close', 'high', 'low', 'ema']].tail(30)
 
     def get_xrate_dict_format(self):
