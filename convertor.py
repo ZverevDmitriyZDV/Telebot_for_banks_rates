@@ -1,7 +1,8 @@
-from bangkok_request import LastUSDToTHBRates
-from tinkoff_request import LastUSDToRUBRates
 import datetime
 from datetime import timedelta
+
+from bangkok_request import LastUSDToTHBRates
+from tinkoff_request import LastUSDToRUBRates
 
 
 class ExchangeConvertor:
@@ -90,3 +91,9 @@ class ExchangeConvertor:
             self.usd_thb_message = ''
             self.rub_thb = 0
         return True
+
+
+# if __name__=='__main__':
+#     a1 = ExchangeConvertor()
+#     a1.get_exchange_message_rub_thb()
+#
