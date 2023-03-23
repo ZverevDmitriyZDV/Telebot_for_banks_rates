@@ -18,9 +18,9 @@ class TelegramBotClient:
         def _send_all_info(message):
             self.send_all_info(message)
 
-        @self.bot.message_handler(commands=['reset', 'update', 'nul'])
-        def _reset_rates_info(message):
-            self.reset_rates_info(message)
+        # @self.bot.message_handler(commands=['reset', 'update', 'nul'])
+        # def _reset_rates_info(message):
+        #     self.reset_rates_info(message)
 
         @self.bot.message_handler(commands=['test'])
         def _send_test_message(message):
@@ -50,20 +50,18 @@ class TelegramBotClient:
                               self.bot_bank_connect.usd_thb_message +
                               message_out)
 
-    def reset_rates_info(self, message):
-        self.bot_bank_connect.reset_rate_data()
-        self.bot.send_message(message.from_user.id, "Rates have been reset")
+    # def reset_rates_info(self, message):
+    #     self.bot_bank_connect.reset_rate_data()
+    #     self.bot.send_message(message.from_user.id, "Rates have been reset")
 
     def send_test_message(self, message):
         self.bot.send_message(message.from_user.id, 'test_response')
 
     def send_usd_rate(self, message):
-        self.bot_bank_connect.get_usd_rub_data()
         usd_rate, message_in = self.bot_bank_connect.usd_rub, self.bot_bank_connect.usd_rub_message
         self.bot.send_message(message.from_user.id, message_in)
 
     def send_thb_rate(self, message):
-        self.bot_bank_connect.get_usd_thb_data()
         thb_rate, message_in = self.bot_bank_connect.usd_thb, self.bot_bank_connect.usd_thb_message
         self.bot.send_message(message.from_user.id, message_in)
 
