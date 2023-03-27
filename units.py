@@ -1,5 +1,13 @@
 import datetime
+from requests import Response
 from datetime import timedelta
+from typing import Callable, Optional
+from logger.logger import Zlogger
+
+bkkb_logger = Zlogger()
+bkkb_logger.name = 'BKKBLOGS'
+bkkb_logger.log_file = 'bangkok_bank'
+logger_bkkb = bkkb_logger.setup_logger
 
 
 def buy_rub_knowing_rub(value, rate):
@@ -21,11 +29,18 @@ def cast_money(v):
 
 def is_time_to_update(time):
     delta = datetime.datetime.now() - time
-    if delta < timedelta(seconds=1):
-        return True
-    # elif delta > timedelta(hours=1, minutes=1):
-    elif delta > timedelta(seconds=10):
-        return True
-    return False
+    return delta > timedelta(hours=1, minutes=1)
 
 
+def check_status(msg: str = "default") -> Optional[Response]:
+    def decorator(f: Callable[..., Response]):
+        def wrapper(*args, **kwargs):
+            resp = f(*args, **kwargs)
+            if resp.status_code == 401:
+                logger_bkkb.error(f'{msg} %s', resp.reason)
+                return False
+            return resp
+
+        return wrapper
+
+    return decorator
