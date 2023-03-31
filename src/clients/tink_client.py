@@ -7,6 +7,7 @@ from tinkoff.invest.utils import now
 
 from src.clients.base_api_class import BankAPI
 from src.clients.const import FIGI_USD
+from src.config.configurator import TinkBankConfiguration
 
 from src.utils.http_tink_utils import logger_tinkoff_logs, check_status_client
 
@@ -17,12 +18,16 @@ class TinkoffBankClient(BankAPI):
     свечей валют
     """
 
-    def __init__(self, token_name: str):
+    def __init__(self):
         """
         Инициализация подключения к клиенту брокера
         :param token_name:  токен подключения к клиенту
         """
-        self.token_name = self.get_token(token_name=token_name)
+        self.token_name = self.get_token()
+
+    def get_token(self):
+        tink_configuration = TinkBankConfiguration()
+        return tink_configuration.token
 
     @check_status_client()
     def get_data(self) -> Optional:

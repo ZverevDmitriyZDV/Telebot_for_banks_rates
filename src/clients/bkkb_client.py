@@ -3,6 +3,7 @@ import datetime
 import requests
 
 from src.clients.base_api_class import BankAPI
+from src.config.configurator import BKKBConfiguration
 
 
 class BKKBClient(BankAPI):
@@ -12,7 +13,7 @@ class BKKBClient(BankAPI):
     """
     url = 'https://bbl-sea-apim-p.azure-api.net/api/ExchangeRateService'
 
-    def __init__(self, token_name: str):
+    def __init__(self):
         """
         Инициализация подключения к API серверу
         :param token_name: токен подключения к API.
@@ -20,7 +21,11 @@ class BKKBClient(BankAPI):
         необходимо зарегистрироваться и запросить токен в клиенте личного профиля банка. Ссылка на получение и
         регистрацию: https://developer.bangkokbank.com/
         """
-        self.headers = {'Ocp-Apim-Subscription-Key': self.get_token(token_name=token_name), }
+        self.headers = {'Ocp-Apim-Subscription-Key': self.get_token(), }
+
+    def get_token(self):
+        bkkb_configuration = BKKBConfiguration()
+        return bkkb_configuration.token
 
     def get_data(self, url_keyword: str):
         """

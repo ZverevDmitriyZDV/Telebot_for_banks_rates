@@ -14,7 +14,7 @@ class LastUSDToRUBRates:
         """
         метод инициализации клиента Тинькофф банка.
         """
-        self.client = TinkoffBankClient('TOKEN_TINK')
+        self.client = TinkoffBankClient()
 
     def get_usd_last_rate(self) -> Optional[Tuple[float, str]]:
         """

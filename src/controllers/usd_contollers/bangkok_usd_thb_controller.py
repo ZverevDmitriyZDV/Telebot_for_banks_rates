@@ -8,7 +8,7 @@ from src.utils.bad_auth_exception import BadAuthException
 class LastUSDToTHBRates:
     def __init__(self):
         # объявление клиента
-        self.client = BKKBDataFrameFormat('TOKEN_BANGKOK')
+        self.client = BKKBDataFrameFormat()
 
     def get_usd_to_thb_rates(self) -> Optional[tuple]:
         # определяем дату последнего обновления котировок
@@ -40,5 +40,5 @@ if __name__ == '__main__':
     # b2 = client2.format_get_x_rate(time_update_date, family)
     # print(type(b2))
     # usd_thb, message = client2.format_get_x_rate(time_update_date, family)
-    # thb_rate = LastUSDToTHBRates()
-    # print(thb_rate.get_usd_to_thb_rates())
+    thb_rate = LastUSDToTHBRates()
+    print(thb_rate.get_usd_to_thb_rates())

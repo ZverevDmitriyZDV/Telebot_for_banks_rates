@@ -1,6 +1,5 @@
 import datetime
 from datetime import timedelta
-from time import sleep
 
 from src.controllers.usd_contollers.bangkok_usd_thb_controller import LastUSDToTHBRates
 from src.controllers.const import RAIF_EX, SWIFT_RAIF, SWIFT_BKKB

@@ -1,17 +1,17 @@
-import os
 import re
 
 import telebot
 from flask import Flask, request
 
+from src.config.configurator import TelegramConfiguration, HerokuConfiguration
 from src.controllers.convertor import ExchangeConvertor
-from src.bin.telebot_client_base import TOKEN
 from src.utils.calculation_utils import buy_rub_knowing_rub, buy_rub_knowing_thb
 
 
 class TelegramBotClient:
-    def __init__(self, token: str):
-        self.bot = telebot.TeleBot(token=token)
+
+    def __init__(self):
+        self.bot = telebot.TeleBot(token=self.get_token)
         self.bot_bank_connect = ExchangeConvertor()
 
         @self.bot.message_handler(commands=["info"])
@@ -38,6 +38,10 @@ class TelegramBotClient:
         def _handle_rate_message(message):
             self.bot.send_message(message.from_user.id, f'!!!!!!Enter yor rate or skip!!!!!!!')
             self.bot.register_next_step_handler(message, self.handle_message)
+    @property
+    def get_token(self):
+        telebot_configuration = TelegramConfiguration()
+        return telebot_configuration.token
 
     def send_all_info(self, message):
         rate, message_out = self.bot_bank_connect.get_exchange_message_rub_thb()
@@ -115,8 +119,9 @@ class TelegramBotClient:
 
     def run_heroku_server(self):
         server = Flask(__name__)
+        heroku_configuration = HerokuConfiguration()
 
-        @server.route('/' + TOKEN, methods=['POST'])
+        @server.route('/' + self.get_token, methods=['POST'])
         def getMessage():
             json_string = request.get_data().decode('utf-8')
             update = telebot.types.Update.de_json(json_string)
@@ -126,7 +131,7 @@ class TelegramBotClient:
         @server.route("/")
         def webhook():
             self.bot.remove_webhook()
-            self.bot.set_webhook(url=f"{os.environ.get['URL_HEROKU']}/" + TOKEN)
+            self.bot.set_webhook(url=f"{heroku_configuration.url}/" + self.get_token)
             return "!", 200
 
-        server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+        server.run(host="0.0.0.0", port=heroku_configuration.port)

@@ -13,12 +13,12 @@ class BKKBDataFrameFormat:
     Реализация класса работы с данными по завершению API запросов
     """
 
-    def __init__(self, token_name: str):
+    def __init__(self):
         """
         Инициализация клиента для работы с API банком
         :param token_name: название переменной для передачи значения токена из env файла
         """
-        self.client = BKKBClient(token_name)
+        self.client = BKKBClient()
 
     @check_status(msg='GETTING INNER FAMILY VALUE DATA FAILED :')
     def get_all_values_family(self) -> HTTPResponse:
