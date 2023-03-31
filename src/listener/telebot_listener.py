@@ -1,12 +1,12 @@
 import os
 import re
-from dotenv import load_dotenv
 
 import telebot
 from flask import Flask, request
 
-from convertor import ExchangeConvertor
-from units import buy_rub_knowing_thb, buy_rub_knowing_rub
+from src.controllers.convertor import ExchangeConvertor
+from src.bin.telebot_client_base import TOKEN
+from src.utils.calculation_utils import buy_rub_knowing_rub, buy_rub_knowing_thb
 
 
 class TelegramBotClient:
@@ -130,10 +130,3 @@ class TelegramBotClient:
             return "!", 200
 
         server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
-
-
-if __name__ == "__main__":
-    load_dotenv(os.path.abspath('.env'))
-    TOKEN = os.environ.get('TELEBOT')
-    tel = TelegramBotClient(TOKEN)
-    tel.run_infinity_poll()

@@ -2,10 +2,10 @@ import datetime
 from datetime import timedelta
 from time import sleep
 
-from bangkok_request import LastUSDToTHBRates
-from tinkoff_request import LastUSDToRUBRates
-from units import is_time_to_update
-from constant_data import *
+from src.controllers.usd_contollers.bangkok_usd_thb_controller import LastUSDToTHBRates
+from src.controllers.const import RAIF_EX, SWIFT_RAIF, SWIFT_BKKB
+from src.controllers.usd_contollers.tinkoff_usd_rub_controller import LastUSDToRUBRates
+from src.utils.calculation_utils import is_time_to_update
 
 
 class ValueRate:
@@ -117,18 +117,18 @@ class ExchangeConvertor:
         return self.money.rub_thb_zdv, message_out
 
 
-if __name__ == '__main__':
-    a1 = ExchangeConvertor()
-    print(a1.money.usd_thb)
-    print(a1.money.usd_rub)
-    print(a1.get_exchange_message_rub_thb())
-    print(a1.money.usd_thb)
-    print(a1.money.usd_rub)
-    print(a1.thb_rates._time)
-    sleep(30)
-    print(a1.money.usd_thb)
-    print(a1.money.usd_rub)
-    print(a1.get_exchange_message_rub_thb())
-    print(a1.money.usd_thb)
-    print(a1.money.usd_rub)
-    print(a1.thb_rates._time)
+# if __name__ == '__main__':
+#     a1 = ExchangeConvertor()
+#     print(a1.money.usd_thb)
+#     print(a1.money.usd_rub)
+#     print(a1.get_exchange_message_rub_thb())
+#     print(a1.money.usd_thb)
+#     print(a1.money.usd_rub)
+#     print(a1.thb_rates._time)
+#     sleep(30)
+#     print(a1.money.usd_thb)
+#     print(a1.money.usd_rub)
+#     print(a1.get_exchange_message_rub_thb())
+#     print(a1.money.usd_thb)
+#     print(a1.money.usd_rub)
+#     print(a1.thb_rates._time)
