@@ -114,20 +114,3 @@ class ExchangeConvertor:
                       f"RUB / THB*  : {self.money.rub_thb_zdv}" \
                       f"\n"
         return self.money.rub_thb_zdv, message_out
-
-
-# if __name__ == '__main__':
-#     a1 = ExchangeConvertor()
-#     print(a1.money.usd_thb)
-#     print(a1.money.usd_rub)
-#     print(a1.get_exchange_message_rub_thb())
-#     print(a1.money.usd_thb)
-#     print(a1.money.usd_rub)
-#     print(a1.thb_rates._time)
-#     sleep(30)
-#     print(a1.money.usd_thb)
-#     print(a1.money.usd_rub)
-#     print(a1.get_exchange_message_rub_thb())
-#     print(a1.money.usd_thb)
-#     print(a1.money.usd_rub)
-#     print(a1.thb_rates._time)

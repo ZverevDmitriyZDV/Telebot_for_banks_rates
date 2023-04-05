@@ -32,16 +32,4 @@ class LastUSDToRUBRates:
         return usd_rates_data.get_xrate_dict_format()
 
 
-if __name__ == '__main__':
-    # # # построчное исполненение
-    # tnk_client = TinkoffBankClient('TOKEN_TINK')
-    # t1 = tnk_client.get_usd_candles()
-    # print(type(t1))
-    # fig_list = tnk_client.get_all_figi_list()
-    # usd_rex = "(US).*"
-    # usd_candles_data = tnk_client.get_usd_candles()
-    # money = CandlesDataFrame(usd_candles_data)
-    # usd_last_rate, message = money.get_xrate_dict_format()
-    # # # реализация класса
-    tink_usd = LastUSDToRUBRates()
-    print(tink_usd.get_usd_last_rate())
+

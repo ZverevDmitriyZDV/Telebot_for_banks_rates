@@ -118,7 +118,9 @@ class BKKBDataFrameFormat:
         if date_list is None or family is None:
             return None, None
         response = self.get_x_rate(date_list, family)
-        # проверка статуса результа запроса
+        # проверка статуса результата запроса
+        if len(response.json()) == 0:
+            return None, None
         data_needed = response.json()[-1]
         date = data_needed.get('Ddate').split('/')
 

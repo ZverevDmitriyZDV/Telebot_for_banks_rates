@@ -31,7 +31,7 @@ class TinkoffDataFrameFormat:
         :param rex_word: -> Str регулярное выражение для валюты
         :return: -> DataFrame объект с названием / тикетом/ figi ключом интересующей валюты
         """
-        return self.list_of_all_ticker_figi[self.list_of_all_ticker_figi['ticker'].str.match(rex_word) == True]
+        return self.list_of_all_ticker_figi[self.list_of_all_ticker_figi['name'].str.match(rex_word) == True]
 
     def get_figi_by_ticker(self, ticker: str) -> Optional[str]:
         """
@@ -43,7 +43,7 @@ class TinkoffDataFrameFormat:
         # проверка данных на соответсвие
         if data_frame_ticker_figi.empty:
             logger_tinkoff_logs.error('GETTING TICKER %s FAILED ', ticker)
-            return
+            return None
         figi_for_ticker = data_frame_ticker_figi['figi'].iloc[0]
         logger_tinkoff_logs.debug('FIGI FOR TICKER %s IS %s', ticker, figi_for_ticker)
         return figi_for_ticker
