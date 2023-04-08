@@ -5,24 +5,28 @@ from pandas import DataFrame
 
 from src.clients.tink_client import TinkoffBankClient
 from src.utils.bad_auth_exception import BadAuthException
+from src.config.configurator import TinkBankConfiguration
+
+
+config = TinkBankConfiguration()
+client_tink = TinkoffBankClient(conf=config)
 
 
 def test_incorrect_token():
-    client_tink = TinkoffBankClient()
-    client_tink.token_name = 'Incorrect_token'
-    assert client_tink.token_name == 'Incorrect_token'
+    incorrect_config = TinkBankConfiguration
+    incorrect_config.token = 'Incorrect_token'
+    incorrect_client_tink = TinkoffBankClient(incorrect_config)
+    assert incorrect_client_tink.token_name == 'Incorrect_token'
     with pytest.raises(BadAuthException) as e_info:
-        client_tink.get_data()
+        incorrect_client_tink.get_data()
 
 
 def test_check_correct_token():
-    client_tink = TinkoffBankClient()
     with client_tink.get_data() as cl:
         assert cl.users.get_accounts().accounts[0].status == AccountStatus.ACCOUNT_STATUS_OPEN
 
 
 def test_get_all_figi_list():
-    client_tink = TinkoffBankClient()
     figi_list = client_tink.get_all_figi_list()
     assert len(figi_list) > 100
 
@@ -41,7 +45,6 @@ def test_get_all_figi_list():
 def test_get_candles_by_figi():
     figi_1 = 'BBG000BFD605'
     figi_2 = 'INCORRECT_FIGI_DATA'
-    client_tink = TinkoffBankClient()
     candles = client_tink.get_candles_by_figi(figi_1)
     assert candles is not None
     assert len(candles) > 2
@@ -50,7 +53,6 @@ def test_get_candles_by_figi():
 
 
 def test_usd_candles():
-    client_tink = TinkoffBankClient()
     usd_candles = client_tink.get_usd_candles()
     assert usd_candles is not None
     assert len(usd_candles) > 2

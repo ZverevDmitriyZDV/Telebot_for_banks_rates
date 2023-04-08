@@ -1,6 +1,7 @@
 import datetime
 from datetime import timedelta
 
+from src.config.configurator import ExchangeConvertorConfiguration
 from src.controllers.usd_contollers.bangkok_usd_thb_controller import LastUSDToTHBRates
 from src.controllers.const import RAIF_EX, SWIFT_RAIF, SWIFT_BKKB
 from src.controllers.usd_contollers.tinkoff_usd_rub_controller import LastUSDToRUBRates
@@ -63,13 +64,16 @@ class ExchangeConvertor:
     класс для определения конверсии из RUB в THB с учетом и без учета комиссии
     """
 
-    def __init__(self):
+    def __init__(self, conf: ExchangeConvertorConfiguration):
         """
         метод инициализации, в котором определяем текущие котировки валют
         """
         self.thb_rates = ValueData()
         self.tink_rates = ValueData()
         self.money = ValueRate()
+        self.conf = conf
+        self.tinkoff = LastUSDToRUBRates(conf.tinkoff)
+        self.bkkbbank = LastUSDToTHBRates(conf.bkkbbank)
 
     def get_usd_rub_data(self) -> ValueData:
         """
@@ -79,7 +83,7 @@ class ExchangeConvertor:
         """
 
         if self.tink_rates.time_update:
-            self.tink_rates.rate, self.tink_rates.message = LastUSDToRUBRates().get_usd_last_rate()
+            self.tink_rates.rate, self.tink_rates.message = self.tinkoff.get_usd_last_rate()
             return self.tink_rates
 
     def get_usd_thb_data(self) -> ValueData:
@@ -89,7 +93,7 @@ class ExchangeConvertor:
         :return: ValueData
         """
         if self.thb_rates.time_update:
-            self.thb_rates.rate, self.thb_rates.message = LastUSDToTHBRates().get_usd_to_thb_rates()
+            self.thb_rates.rate, self.thb_rates.message = self.bkkbbank.get_usd_to_thb_rates()
         return self.thb_rates
 
     def get_thb_rub_rate(self) -> (float, str):

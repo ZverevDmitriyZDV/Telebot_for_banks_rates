@@ -16,7 +16,7 @@ class TinkoffDataFrameFormat:
     pd.set_option('display.max_columns', 500)
     pd.set_option('display.width', 1000)
 
-    def __init__(self, list_of_all_ticker_figi: list) -> Optional[DataFrame]:
+    def __init__(self, list_of_all_ticker_figi: list):
         """
         метод инициализации класса
         :param list_of_all_ticker_figi: список дынных всех валют с информацие по названию / тикеру / figi-кода.
@@ -61,7 +61,7 @@ class CandlesDataFrame:
         """
         self.candles = candles
 
-    def create_df(self) -> DataFrame:
+    def create_df(self) -> Optional[DataFrame]:
         """
         метод преобразования списка в DataFrame объект с выделением конкретной информации и преобразованием валют
         :return: -> DataFrame объект данных свечей с форматированными данными по стоимости
@@ -80,7 +80,7 @@ class CandlesDataFrame:
         } for candle in self.candles])
         return candles_df_data
 
-    def get_xrates_ema_dataframe(self) -> DataFrame:
+    def get_xrates_ema_dataframe(self) -> Optional[DataFrame]:
         """
         Метод получения значения средней скользящей для котировок валюты. Значение EMA
         Подробнее и тех анализа трейдеров https://technical-analysis-library-in-python.readthedocs.io/en/latest/ta.html#ta.trend.ema_indicator
@@ -93,7 +93,7 @@ class CandlesDataFrame:
         logger_tinkoff_logs.debug('RATES HAVE BEEN RECEIVED')
         return candles_df_data[['time', 'open', 'close', 'high', 'low', 'ema']].tail(30)
 
-    def get_xrate_dict_format(self) -> Optional[Tuple[float, str]]:
+    def get_xrate_dict_format(self) -> Tuple[Optional[float], Optional[str]]:
         """
         Метод форматирования данных в формате словаря, с определением максимального текущего курса заданной валюты
         :return: -> Dict словарь с данными максимальных котировок валюты с учетом EMA значением

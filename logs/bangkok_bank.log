@@ -14,3 +14,2249 @@
 2023-03-31 12:30:01,065 DEBUG T-T RATE LAST UPDATE 33.97
 2023-03-31 12:56:01,484 DEBUG LAST BANGKOKBANK UPDATE RATE ['31', '03', '2023'] - 10:10     
 2023-03-31 12:56:01,699 DEBUG T-T RATE LAST UPDATE 33.97
+2023-04-04 11:41:14,538 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:41:32,708 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:41:55,100 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:43:10,785 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:43:36,974 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:45:27,995 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:45:39,453 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:45:56,624 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:47:49,912 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:50:27,347 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:50:43,758 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:52:12,898 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:52:29,456 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 11:55:27,185 DEBUG LAST BANGKOKBANK UPDATE RATE ['04', '04', '2023'] - 08:30     
+2023-04-04 11:55:40,116 DEBUG LAST BANGKOKBANK UPDATE RATE ['04', '04', '2023'] - 08:30     
+2023-04-04 11:56:02,625 DEBUG LAST BANGKOKBANK UPDATE RATE ['04', '04', '2023'] - 08:30     
+2023-04-04 11:56:45,955 DEBUG LAST BANGKOKBANK UPDATE RATE ['04', '04', '2023'] - 08:30     
+2023-04-04 12:00:55,404 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:00:55,426 DEBUG FAMILY FOR Laos Kip VALUE HAS BEEN RECEIVED: LAK
+2023-04-04 12:01:37,684 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:01:37,702 DEBUG FAMILY FOR Laos Kip VALUE HAS BEEN RECEIVED: LAK
+2023-04-04 12:02:35,676 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:02:35,694 DEBUG FAMILY FOR Laos Kip VALUE HAS BEEN RECEIVED: LAK
+2023-04-04 12:02:35,849 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:02:35,866 ERROR FAMILY FOR INCORRECT_CURRENCY VALUE HAS NOT BEEN FOUND:
+2023-04-04 12:02:43,403 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:02:43,421 DEBUG FAMILY FOR Laos Kip VALUE HAS BEEN RECEIVED: LAK
+2023-04-04 12:02:43,612 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:02:43,657 ERROR FAMILY FOR INCORRECT_CURRENCY VALUE HAS NOT BEEN FOUND:
+2023-04-04 12:05:25,611 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:05:25,633 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:05:36,250 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:05:36,271 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:08:40,153 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:08:40,169 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:09:32,577 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:09:32,593 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:10:19,949 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:10:19,968 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:10:46,731 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:10:46,751 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:11:55,659 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:11:55,679 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:12:53,907 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:12:53,926 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:13:04,553 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:13:04,573 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:13:29,320 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:13:29,359 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:14:33,447 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:14:33,468 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:14:46,854 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:14:46,874 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:15:00,503 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:15:00,520 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:16:28,804 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:16:28,824 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:16:44,809 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:16:44,852 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:17:24,201 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:17:24,217 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 12:18:41,718 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:18:41,747 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+Empty DataFrame
+Columns: [Family, Description]
+Index: []
+2023-04-04 12:18:58,012 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:18:58,032 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+Empty DataFrame
+Columns: [Family, Description]
+Index: []
+2023-04-04 12:19:45,042 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:19:45,058 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+Empty DataFrame
+Columns: [Family, Description]
+Index: []
+2023-04-04 12:20:20,414 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:20:20,431 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+Empty DataFrame
+Columns: [Family, Description]
+Index: []
+2023-04-04 12:21:58,303 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 12:21:58,342 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+Empty DataFrame
+Columns: [Family, Description]
+Index: []
+2023-04-04 13:02:39,471 DEBUG T-T RATE LAST UPDATE 34.09
+2023-04-04 13:03:39,670 DEBUG T-T RATE LAST UPDATE 34.09
+2023-04-04 13:12:22,930 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-04 13:12:23,182 DEBUG LAST BANGKOKBANK UPDATE RATE ['04', '04', '2023'] - 08:30     
+2023-04-04 13:12:23,362 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 13:12:23,379 DEBUG FAMILY FOR Laos Kip VALUE HAS BEEN RECEIVED: LAK
+2023-04-04 13:12:23,683 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 13:12:23,696 ERROR FAMILY FOR INCORRECT_CURRENCY VALUE HAS NOT BEEN FOUND:
+2023-04-04 13:12:23,878 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 13:12:23,893 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-04 13:12:24,059 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-04 13:12:24,073 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+Empty DataFrame
+Columns: [Family, Description]
+Index: []
+2023-04-04 13:12:24,516 DEBUG T-T RATE LAST UPDATE 34.09
+2023-04-05 11:09:29,965 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:09:30,143 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:19:59,264 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:19:59,437 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:20:25,983 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:20:26,139 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:20:43,872 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:20:44,032 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:20:59,144 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:20:59,524 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:21:10,183 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:21:10,336 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:23:16,934 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:23:17,098 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:25:32,043 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:25:32,216 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:26:03,319 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:26:03,487 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:28:47,099 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:28:47,263 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:30:11,233 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:30:11,402 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:30:31,282 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:30:31,548 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:31:41,248 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:31:41,414 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:34:17,101 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 10:50     
+2023-04-05 11:34:17,336 DEBUG T-T RATE LAST UPDATE 33.85
+2023-04-05 11:34:17,499 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-05 12:19:46,981 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:19:47,161 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:24:20,827 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:24:20,996 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:27:15,752 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:27:15,934 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:28:43,810 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:28:43,964 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:32:47,671 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:32:47,833 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:34:20,548 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:34:20,709 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:34:39,434 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:34:39,599 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:34:53,028 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:34:53,205 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:35:30,141 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:35:30,307 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:36:47,372 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:36:47,524 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:38:39,925 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:38:40,107 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:39:18,217 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:39:18,381 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:41:14,531 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:41:14,689 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:43:03,220 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:43:03,374 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:43:05,445 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:43:05,609 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:47:41,063 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-05 12:47:41,254 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:47:41,442 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-05 12:47:41,451 DEBUG FAMILY FOR Laos Kip VALUE HAS BEEN RECEIVED: LAK
+2023-04-05 12:47:41,623 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-05 12:47:41,629 ERROR FAMILY FOR INCORRECT_CURRENCY VALUE HAS NOT BEEN FOUND:
+2023-04-05 12:47:41,796 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-05 12:47:41,802 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-05 12:47:41,961 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-05 12:47:41,967 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+Empty DataFrame
+Columns: [Family, Description]
+Index: []
+2023-04-05 12:47:42,212 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:47:44,599 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:47:44,759 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:47:44,926 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:47:45,097 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:47:47,102 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:47:47,262 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:47:49,265 DEBUG LAST BANGKOKBANK UPDATE RATE ['05', '04', '2023'] - 12:05     
+2023-04-05 12:47:49,421 DEBUG T-T RATE LAST UPDATE 33.82
+2023-04-05 12:47:49,584 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-08 19:05:14,409 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:05:14,599 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:22:33,023 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:22:33,191 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:22:33,219 DEBUG FAMILY FOR Laos Kip VALUE HAS BEEN RECEIVED: LAK
+2023-04-08 19:22:33,423 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:22:33,429 ERROR FAMILY FOR INCORRECT_CURRENCY VALUE HAS NOT BEEN FOUND:
+2023-04-08 19:22:33,586 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:22:33,593 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-08 19:22:33,747 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:22:33,753 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+Empty DataFrame
+Columns: [Family, Description]
+Index: []
+2023-04-08 19:22:33,922 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:22:54,260 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-08 19:22:54,423 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:22:54,596 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:22:54,620 DEBUG FAMILY FOR Laos Kip VALUE HAS BEEN RECEIVED: LAK
+2023-04-08 19:22:54,814 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:22:54,819 ERROR FAMILY FOR INCORRECT_CURRENCY VALUE HAS NOT BEEN FOUND:
+2023-04-08 19:22:54,968 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:22:54,976 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-08 19:22:55,135 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:22:55,155 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+Empty DataFrame
+Columns: [Family, Description]
+Index: []
+2023-04-08 19:22:55,360 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:27:19,191 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:27:19,347 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:27:34,632 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:27:34,776 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:27:34,948 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-08 19:30:26,026 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:30:26,187 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:30:26,486 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:30:26,637 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:30:29,614 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:30:29,763 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:31:40,859 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-08 19:31:41,017 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:31:41,184 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:31:41,192 DEBUG FAMILY FOR Laos Kip VALUE HAS BEEN RECEIVED: LAK
+2023-04-08 19:31:41,353 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:31:41,359 ERROR FAMILY FOR INCORRECT_CURRENCY VALUE HAS NOT BEEN FOUND:
+2023-04-08 19:31:41,530 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:31:41,537 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-08 19:31:41,696 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:31:41,702 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+Empty DataFrame
+Columns: [Family, Description]
+Index: []
+2023-04-08 19:31:41,852 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:31:42,113 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:31:42,280 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:31:42,434 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-08 19:31:48,926 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:31:49,095 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:31:49,240 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:31:49,405 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:31:51,938 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:31:52,101 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:57:45,051 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-08 19:57:45,208 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:57:45,373 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:57:45,380 DEBUG FAMILY FOR Laos Kip VALUE HAS BEEN RECEIVED: LAK
+2023-04-08 19:57:45,543 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:57:45,549 ERROR FAMILY FOR INCORRECT_CURRENCY VALUE HAS NOT BEEN FOUND:
+2023-04-08 19:57:45,707 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:57:45,714 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+   Family         Description
+0    USD1       us dollar 1-2
+1    USD5      us dollar 5-20
+2   USD50    us dollar 50-100
+6     HKD    hong kong dollar
+8     SGD    singapore dollar
+9     BND       brunei dollar
+17    TWD       taiwan dollar
+18    AUD   australian dollar
+19    NZD  new zealand dollar
+24    CAD     canadian dollar
+2023-04-08 19:57:45,873 DEBUG ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED 
+   Family         Description
+0    USD1       US Dollar 1-2
+1    USD5      US Dollar 5-20
+2   USD50    US Dollar 50-100
+3     GBP      Pound Sterling
+4     EUR                Euro
+5     JPY        Japanese Yen
+6     HKD    Hong Kong Dollar
+7     MYR   Malaysian Ringgit
+8     SGD    Singapore Dollar
+9     BND       Brunei Dollar
+10    CNY        Chinese Yuan
+11    IDR   Indonesian Rupiah
+12    MMK        Myanmar Kyat
+13    INR        Indian Rupee
+14    KRW          Korean Won
+15    LAK            Laos Kip
+16    PHP     Philippine Peso
+17    TWD       Taiwan Dollar
+18    AUD   Australian Dollar
+19    NZD  New Zealand Dollar
+20    CHF         Swiss Franc
+21    DKK        Danish Krone
+22    NOK     Norwegian Krone
+23    SEK       Swedish Krona
+24    CAD     Canadian Dollar
+25    RUB        Russia Ruble
+26    VND        Vietnam Dong
+27    ZAR   South Africa Rand
+28    AED          UAE Dirham
+29    BHD      Bahraini Dinar
+30    OMR          Rial Omani
+31    QAR        Qatari Riyal
+32    SAR         Saudi Riyal
+2023-04-08 19:57:45,880 DEBUG ALL FAMILIES CLOSE TO CURRENSY 
+Empty DataFrame
+Columns: [Family, Description]
+Index: []
+2023-04-08 19:57:46,046 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:57:46,312 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:57:46,476 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:57:46,631 ERROR GETTING LAST RATES UPDATE FAILED : Access Denied
+2023-04-08 19:57:52,974 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:57:53,125 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:57:53,282 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:57:53,419 DEBUG T-T RATE LAST UPDATE 33.94
+2023-04-08 19:57:56,028 DEBUG LAST BANGKOKBANK UPDATE RATE ['07', '04', '2023'] - 14:05     
+2023-04-08 19:57:56,185 DEBUG T-T RATE LAST UPDATE 33.94

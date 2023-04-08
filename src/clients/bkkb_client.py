@@ -11,9 +11,7 @@ class BKKBClient(BankAPI):
     Реализация класса запросов по API BangkokBank
     url запроса котировок определе для всех экземпляров класса
     """
-    url = 'https://bbl-sea-apim-p.azure-api.net/api/ExchangeRateService'
-
-    def __init__(self):
+    def __init__(self, conf: BKKBConfiguration):
         """
         Инициализация подключения к API серверу
         :param token_name: токен подключения к API.
@@ -21,11 +19,9 @@ class BKKBClient(BankAPI):
         необходимо зарегистрироваться и запросить токен в клиенте личного профиля банка. Ссылка на получение и
         регистрацию: https://developer.bangkokbank.com/
         """
-        self.token = self.get_token()
-
-    def get_token(self):
-        bkkb_configuration = BKKBConfiguration()
-        return bkkb_configuration.token
+        self.conf = conf
+        self.token = self.conf.token
+        self.url = self.conf.url
 
     @property
     def headers(self):

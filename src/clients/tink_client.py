@@ -1,8 +1,8 @@
 from datetime import timedelta
 from typing import Optional
 
-from tinkoff.invest import Client, RequestError, CandleInterval
-from tinkoff.invest.services import InstrumentsService, MarketDataService
+from tinkoff.invest import Client, CandleInterval
+from tinkoff.invest.services import InstrumentsService
 from tinkoff.invest.utils import now
 
 from src.clients.base_api_class import BankAPI
@@ -18,16 +18,13 @@ class TinkoffBankClient(BankAPI):
     свечей валют
     """
 
-    def __init__(self):
+    def __init__(self, conf: TinkBankConfiguration):
         """
         Инициализация подключения к клиенту брокера
         :param token_name:  токен подключения к клиенту
         """
-        self.token_name = self.get_token()
-
-    def get_token(self):
-        tink_configuration = TinkBankConfiguration()
-        return tink_configuration.token
+        self.conf = conf
+        self.token_name = self.conf.token
 
     @check_status_client()
     def get_data(self) -> Optional:
@@ -39,9 +36,9 @@ class TinkoffBankClient(BankAPI):
         :return: -> list() список данных по каждой валюте, по которой проходят торговые операции
         """
         # поиск всех валют по которым проходят торговые операции(method), все данные хранятся во внутреннем классе
+        list_of_all_ticker_figi = list()
         with self.get_data() as cl:
             instruments: InstrumentsService = cl.instruments
-            list_of_all_ticker_figi = list()
             for method in ['shares', 'bonds', 'etfs', 'currencies', 'futures']:
                 for item in getattr(instruments, method)().instruments:
                     list_of_all_ticker_figi.append({
@@ -50,8 +47,8 @@ class TinkoffBankClient(BankAPI):
                         'type': method,
                         'name': item.name,
                     })
-            logger_tinkoff_logs.debug('''ALL FIGI'S LIST HAVE BEEN FOUND''')
-            return list_of_all_ticker_figi
+        logger_tinkoff_logs.debug('''ALL FIGI'S LIST HAVE BEEN FOUND''')
+        return list_of_all_ticker_figi
 
     def get_candles_by_figi(self, figi: str) -> Optional[list]:
         """
@@ -66,19 +63,18 @@ class TinkoffBankClient(BankAPI):
         # поиск информации японских торговых свечей для определенной валюты. Код валюты передается через FIGI
         # для реализации используется внутренний класс MarketDataService
         with self.get_data() as client:
-            market_data: MarketDataService = client.market_data
             response = client.market_data.get_candles(
                 figi=figi,
                 from_=now() - timedelta(days=3),
                 to=now(),
                 interval=CandleInterval.CANDLE_INTERVAL_HOUR
             )
-            # проверка ответа на корректность исходного запроса
-            if len(response.candles) == 0:
-                logger_tinkoff_logs.error('FIGI IS WRONG. NO CANDLES HAVE BEEN FOUNDED')
-                return None
-            logger_tinkoff_logs.debug('CANDLES INFO FOR FIGI %s HAVE BEEN FOUND', figi)
-            return response.candles
+        # проверка ответа на корректность исходного запроса
+        if len(response.candles) == 0:
+            logger_tinkoff_logs.error('FIGI IS WRONG. NO CANDLES HAVE BEEN FOUNDED')
+            return None
+        logger_tinkoff_logs.debug('CANDLES INFO FOR FIGI %s HAVE BEEN FOUND', figi)
+        return response.candles
 
     def get_usd_candles(self) -> Optional[list]:
         """

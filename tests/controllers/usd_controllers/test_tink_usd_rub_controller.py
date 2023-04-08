@@ -1,11 +1,13 @@
 import re
 from datetime import datetime, timedelta
 
+from src.config.configurator import TinkBankConfiguration
 from src.controllers.usd_contollers.tinkoff_usd_rub_controller import LastUSDToRUBRates
 
 
 def test_get_usd_last_rate():
-    usd_to_rub = LastUSDToRUBRates()
+    conf = TinkBankConfiguration()
+    usd_to_rub = LastUSDToRUBRates(conf=conf)
     rate, message = usd_to_rub.get_usd_last_rate()
     reg = r'(Update : )(\S*\s*\S*)'
     time_search = re.search(reg, message).group(0)[-10:]
@@ -17,6 +19,7 @@ def test_get_usd_last_rate():
 
 
 def test_bad_auth_get_usd_last_rate():
-    usd_to_rub = LastUSDToRUBRates()
-    usd_to_rub.client.token_name = 'INCORRECT_TOKEN'
+    bad_conf = TinkBankConfiguration()
+    bad_conf.token = 'INCORRECT_TOKEN'
+    usd_to_rub = LastUSDToRUBRates(bad_conf)
     assert usd_to_rub.get_usd_last_rate() is None

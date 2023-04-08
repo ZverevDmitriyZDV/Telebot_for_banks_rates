@@ -3,16 +3,18 @@ import re
 import telebot
 from flask import Flask, request
 
-from src.config.configurator import TelegramConfiguration, HerokuConfiguration
-from src.controllers.convertor import ExchangeConvertor
+from src.config.configurator import HerokuConfiguration, AppConfiguration
+from src.convertor.convertor import ExchangeConvertor
 from src.utils.calculation_utils import buy_rub_knowing_rub, buy_rub_knowing_thb
 
 
 class TelegramBotClient:
 
-    def __init__(self):
-        self.bot = telebot.TeleBot(token=self.get_token)
-        self.bot_bank_connect = ExchangeConvertor()
+    def __init__(self, conf: AppConfiguration):
+        self.conf = conf
+        self.token = self.conf.telegram_conf.token
+        self.bot = telebot.TeleBot(token=self.token)
+        self.bot_bank_connect = ExchangeConvertor(self.conf.exchange_conf)
 
         @self.bot.message_handler(commands=["info"])
         def _send_all_info(message):
@@ -38,10 +40,6 @@ class TelegramBotClient:
         def _handle_rate_message(message):
             self.bot.send_message(message.from_user.id, f'!!!!!!Enter yor rate or skip!!!!!!!')
             self.bot.register_next_step_handler(message, self.handle_message)
-    @property
-    def get_token(self):
-        telebot_configuration = TelegramConfiguration()
-        return telebot_configuration.token
 
     def send_all_info(self, message):
         rate, message_out = self.bot_bank_connect.get_exchange_message_rub_thb()
@@ -69,7 +67,7 @@ class TelegramBotClient:
 
     def handle_rate_message(self, message):
         self.bot.send_message(message.from_user.id, f'!!!!!!Enter yor rate or skip!!!!!!!')
-        self.bot.register_next_step_handler(message, handle_message)
+        self.bot.register_next_step_handler(message, self.handle_message)
 
     def handle_message(self, message):
         global rate
@@ -78,7 +76,7 @@ class TelegramBotClient:
             value_rate = re.search(r"\d+\.?\d*", value_rate)
             rate = float(value_rate.group(0))
         except:
-            rate, message_out = ExchangeConvertor().get_exchange_message_rub_thb()
+            rate, message_out = self.bot_bank_connect.get_exchange_message_rub_thb()
         self.bot.send_message(message.from_user.id, f'Ready to convert with rate {rate}\n'
                                                     f'Enter amount of money with THB to RUB in the end')
         self.bot.register_next_step_handler(message, self.get_money_value)
@@ -121,7 +119,7 @@ class TelegramBotClient:
         server = Flask(__name__)
         heroku_configuration = HerokuConfiguration()
 
-        @server.route('/' + self.get_token, methods=['POST'])
+        @server.route(f'/{self.token}', methods=['POST'])
         def getMessage():
             json_string = request.get_data().decode('utf-8')
             update = telebot.types.Update.de_json(json_string)
@@ -131,7 +129,7 @@ class TelegramBotClient:
         @server.route("/")
         def webhook():
             self.bot.remove_webhook()
-            self.bot.set_webhook(url=f"{heroku_configuration.url}/" + self.get_token)
+            self.bot.set_webhook(url=f"{heroku_configuration.url}/{self.token}")
             return "!", 200
 
         server.run(host="0.0.0.0", port=heroku_configuration.port)

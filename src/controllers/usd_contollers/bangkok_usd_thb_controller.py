@@ -1,14 +1,16 @@
 from typing import Optional
 
+from src.config.configurator import BKKBConfiguration
 from src.controllers.const import BKK_USD_FAMILY
 from src.controllers.bkkb_controller import BKKBDataFrameFormat
 from src.utils.bad_auth_exception import BadAuthException
 
 
 class LastUSDToTHBRates:
-    def __init__(self):
+    def __init__(self, conf: BKKBConfiguration):
         # объявление клиента
-        self.client = BKKBDataFrameFormat()
+        self.conf = conf
+        self.client = BKKBDataFrameFormat(self.conf)
 
     def get_usd_to_thb_rates(self) -> Optional[tuple]:
         # определяем дату последнего обновления котировок

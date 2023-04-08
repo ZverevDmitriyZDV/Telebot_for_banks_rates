@@ -4,25 +4,28 @@ import datetime
 from pandas import DataFrame
 
 from src.clients.bkkb_client import BKKBClient
+from src.config.configurator import BKKBConfiguration
+
+config = BKKBConfiguration()
+bkkb_client = BKKBClient(conf=config)
 
 
 def test_correct_token():
-    bkkb_client = BKKBClient()
     response = bkkb_client.get_data('ServiceVersion')
     assert response.status_code == 200
     assert type(response.json()) == str
 
 
 def test_incorrect_token():
-    bkkb_client = BKKBClient()
-    bkkb_client.token = 'INCORRECT_TOKEN'
-    response = bkkb_client.get_data('ServiceVersion')
+    incorrect_config = BKKBConfiguration()
+    incorrect_config.token = 'INCORRECT_TOKEN'
+    bkkb_client_incorrect = BKKBClient(incorrect_config)
+    response = bkkb_client_incorrect.get_data('ServiceVersion')
     assert response.status_code == 401
     assert response.json().get('message') is not None
 
 
 def test_last_update():
-    bkkb_client = BKKBClient()
     response = bkkb_client.get_last_update()
     now = datetime.datetime.now().strftime('%d/%m/%Y')
     assert response.status_code == 200
@@ -30,7 +33,6 @@ def test_last_update():
 
 
 def test_get_all_families():
-    bkkb_client = BKKBClient()
     response = bkkb_client.get_all_values_families()
     assert response.status_code == 200
     assert len(response.json()) > 10
@@ -49,7 +51,6 @@ def test_get_all_families():
 
 
 def test_last_rate_update():
-    bkkb_client = BKKBClient()
     response = bkkb_client.get_last_all_rate_update_for_value(dict(day='02', month='04', year='2023'), 'LAK')
     assert response.status_code == 200
     assert len(response.json()) > 0
@@ -57,7 +58,6 @@ def test_last_rate_update():
 
 
 def test_last_rate_update_incorrect_value():
-    bkkb_client = BKKBClient()
     ticker_incorrect = 'INCORRECT_VALUE'
     response = bkkb_client.get_last_all_rate_update_for_value(dict(day='02', month='04', year='2023'), ticker_incorrect)
     assert response.status_code == 200

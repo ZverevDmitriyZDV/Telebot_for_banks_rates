@@ -1,7 +1,6 @@
 from typing import Callable
 
-from requests import Response
-from tinkoff.invest import RequestError
+from tinkoff.invest import RequestError, Client
 
 from src.logger.logger import Zlogger
 from src.utils.bad_auth_exception import BadAuthException
@@ -13,9 +12,9 @@ logger_tinkoff_logs = tink_logger.setup_logger
 
 
 def check_status_client() -> Callable:
-    def decorator(f: Callable[..., Response]):
+    def decorator(f: Callable[..., Client]):
 
-        def wrapper(*args, **kwargs) -> Response:
+        def wrapper(*args, **kwargs) -> Client:
             try:
                 with f(*args, **kwargs) as client:
                     client.users.get_accounts()

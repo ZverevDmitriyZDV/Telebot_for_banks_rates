@@ -3,6 +3,7 @@ from typing import Optional, Tuple
 from src.clients.tink_client import TinkoffBankClient
 from src.controllers.tink_controller import CandlesDataFrame
 from src.utils.bad_auth_exception import BadAuthException
+from src.config.configurator import TinkBankConfiguration
 
 
 class LastUSDToRUBRates:
@@ -10,11 +11,12 @@ class LastUSDToRUBRates:
     класс для определения последнего обновления котировокл валюыт USD
     """
 
-    def __init__(self):
+    def __init__(self, conf: TinkBankConfiguration):
         """
         метод инициализации клиента Тинькофф банка.
         """
-        self.client = TinkoffBankClient()
+        self.conf = conf
+        self.client = TinkoffBankClient(conf)
 
     def get_usd_last_rate(self) -> Optional[Tuple[float, str]]:
         """
@@ -30,6 +32,3 @@ class LastUSDToRUBRates:
         usd_rates_data = CandlesDataFrame(usd_candles_data)
         # форматирование результата в вид словаря
         return usd_rates_data.get_xrate_dict_format()
-
-
-

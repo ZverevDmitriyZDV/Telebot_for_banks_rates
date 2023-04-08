@@ -1,10 +1,11 @@
-from http.client import HTTPResponse
 from typing import Optional
 
 import pandas as pd
 from pandas import DataFrame
+from requests import Response
 
 from src.clients.bkkb_client import BKKBClient
+from src.config.configurator import BKKBConfiguration
 from src.utils.http_bkkb_utils import check_status, logger_bkkbanks_logs
 
 
@@ -13,23 +14,24 @@ class BKKBDataFrameFormat:
     Реализация класса работы с данными по завершению API запросов
     """
 
-    def __init__(self):
+    def __init__(self, conf: BKKBConfiguration):
         """
         Инициализация клиента для работы с API банком
         :param token_name: название переменной для передачи значения токена из env файла
         """
-        self.client = BKKBClient()
+        self.conf = conf
+        self.client = BKKBClient(self.conf)
 
     @check_status(msg='GETTING INNER FAMILY VALUE DATA FAILED :')
-    def get_all_values_family(self) -> HTTPResponse:
+    def get_all_values_family(self) -> Response:
         return self.client.get_all_values_families()
 
     @check_status(msg='GETTING RATE FOR CURRENCY IS FAILED :')
-    def get_x_rate(self, date_list: dict, family: str) -> HTTPResponse:
+    def get_x_rate(self, date_list: dict, family: str) -> Response:
         return self.client.get_last_all_rate_update_for_value(date_list, family)
 
     @check_status(msg='GETTING LAST RATES UPDATE FAILED :')
-    def get_last_update(self) -> HTTPResponse:
+    def get_last_update(self) -> Response:
         return self.client.get_last_update()
 
     def format_update_data(self) -> Optional[dict]:
@@ -64,7 +66,8 @@ class BKKBDataFrameFormat:
         # max.rows рекомендуется указать не более 30. Без натройки None отображение будет в свернутом виде
         pd.set_option('display.max_rows', None)
         # запись логов удачного результат
-        logger_bkkbanks_logs.debug('ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED \n%s', bangkok_bank_inner_families_values)
+        logger_bkkbanks_logs.debug('ALL INNER FAMILIES VALUES HAVE BEEN RECEIVED \n%s',
+                                   bangkok_bank_inner_families_values)
         return bangkok_bank_inner_families_values
 
     def format_get_family_by_currency(self, currency: str) -> Optional[str]:
@@ -100,7 +103,7 @@ class BKKBDataFrameFormat:
         data_frame['Description'] = data_frame['Description'].str.lower()
         # фильтрация данных по требуемому ключевому значению
         format_families_by_reg = data_frame[
-            data_frame['Description'].str.match(f"((.*)({reg_currency.lower()}).*)") == True]
+            data_frame['Description'].str.match(f"((.*)({reg_currency.lower()}).*)")==True]
         # запись логов удачного результат
         logger_bkkbanks_logs.debug('ALL FAMILIES CLOSE TO CURRENSY \n%s', format_families_by_reg)
         return format_families_by_reg
@@ -123,7 +126,6 @@ class BKKBDataFrameFormat:
             return None, None
         data_needed = response.json()[-1]
         date = data_needed.get('Ddate').split('/')
-
         tt_rate = float(data_needed.get(rate_info))
         date = f"{date[1]}/{date[0]}/{date[2]}"
         time = data_needed.get('DTime')
