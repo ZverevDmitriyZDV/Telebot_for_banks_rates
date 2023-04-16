@@ -1,22 +1,18 @@
 import logging
 
 
-class Zlogger:
+class Zlogger(logging.Logger):
 
-    def __int__(self, name, log_file):
-        self.name = name
-        self.log_file = log_file
+    def __init__(self, conf):
+        super(Zlogger, self).__init__(conf.name, conf.log_level)
+        self.log_file = conf.log_file
+        self._setup_logger()
+        self.config = conf
 
-    @property
-    def setup_logger(self, level=logging.DEBUG):
+    def _setup_logger(self):
         """To setup as many loggers as you want"""
-
-        handler = logging.FileHandler(filename=f'logs/{self.log_file}.log')
-        handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s %(message)s'))
+        logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s')
         logger = logging.getLogger(self.name)
-        logger.setLevel(level)
-        logger.addHandler(handler)
+        if self.log_file:
+            logger.addHandler(logging.FileHandler(filename=f'logs/{self.log_file}.log'))
         return logger
-
-
-

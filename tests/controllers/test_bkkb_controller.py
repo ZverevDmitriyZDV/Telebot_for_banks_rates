@@ -26,9 +26,12 @@ def test_incorrect_token():
 
 
 def test_format_update_date():
-    now_month = datetime.datetime.now().strftime('%m')
+    now_time = datetime.datetime.now()
     result_data = bkkb_client_df.format_update_data()
-    assert result_data.get('month') == now_month
+    result_data_datetime = datetime.datetime(day=int(result_data['day']), month=int(result_data['month']),
+                                             year=int(result_data['year']))
+    delta_time = now_time - result_data_datetime
+    assert delta_time < datetime.timedelta(days=10)
 
 
 def test_format_get_family_by_currency():

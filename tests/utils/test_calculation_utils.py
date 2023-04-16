@@ -1,7 +1,6 @@
 import datetime
 
 import pytest
-from datetime import date
 
 from src.utils.calculation_utils import buy_rub_knowing_rub, \
                                         buy_rub_knowing_thb, cast_money, \

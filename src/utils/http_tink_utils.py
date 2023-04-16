@@ -2,13 +2,13 @@ from typing import Callable
 
 from tinkoff.invest import RequestError, Client
 
+from src.config.configurator import TinkLogerConfiguration
 from src.logger.logger import Zlogger
 from src.utils.bad_auth_exception import BadAuthException
 
-tink_logger = Zlogger()
-tink_logger.name = 'TINKLOGS'
-tink_logger.log_file = 'tinkoff_logs'
-logger_tinkoff_logs = tink_logger.setup_logger
+
+conf = TinkLogerConfiguration()
+logger_tinkoff_logs = Zlogger(conf=conf)
 
 
 def check_status_client() -> Callable:
