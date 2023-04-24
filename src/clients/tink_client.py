@@ -27,7 +27,7 @@ class TinkoffBankClient(BankAPI):
         self.token_name = self.conf.token
 
     @check_status_client()
-    def get_data(self) -> Optional:
+    def get_data(self) -> Client:
         return Client(self.token_name)
 
     def get_all_figi_list(self) -> Optional[list]:

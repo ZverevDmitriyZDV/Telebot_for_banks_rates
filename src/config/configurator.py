@@ -41,7 +41,6 @@ class BkkBLogerConfiguration(LoggerConfiguration):
     log_file: str = Field(default='bangkok_bank', env='BKKB_LOGS_FILE')
 
 
-
 class TinkLogerConfiguration(LoggerConfiguration):
     name: str = Field(default='TINKLOGS', env='TINK_LOGS')
     log_file: str = Field(default='tinkoff_logs', env='TINK_LOGS_FILE')

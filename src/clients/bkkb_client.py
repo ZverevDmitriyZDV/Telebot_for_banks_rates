@@ -11,6 +11,7 @@ class BKKBClient(BankAPI):
     Реализация класса запросов по API BangkokBank
     url запроса котировок определе для всех экземпляров класса
     """
+
     def __init__(self, conf: BKKBConfiguration):
         """
         Инициализация подключения к API серверу

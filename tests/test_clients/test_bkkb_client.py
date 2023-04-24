@@ -2,42 +2,47 @@ import pytest
 import datetime
 
 from pandas import DataFrame
-
-from src.clients.bkkb_client import BKKBClient
-from src.config.configurator import BKKBConfiguration
-
-config = BKKBConfiguration()
-bkkb_client = BKKBClient(conf=config)
+from tests.fixtures_for_bkkb_client import correct_client, incorrect_client, get_last_data_response,get_family_responce,get_lak_update_rates,get_usd_update_rates
 
 
-def test_correct_token():
-    response = bkkb_client.get_data('ServiceVersion')
-    assert response.status_code == 200
-    assert type(response.json()) == str
+def test_token_bkkb(requests_mock, correct_client):
+    bkkb_client = correct_client
+    headers = bkkb_client.headers
+    requests_mock.get('http://some_url/ServiceVersion', request_headers=headers, text='2.0.0.1', status_code=200)
+    assert bkkb_client.get_data('ServiceVersion').text == '2.0.0.1'
+    assert bkkb_client.get_data('ServiceVersion').status_code == 200
 
 
-def test_incorrect_token():
-    incorrect_config = BKKBConfiguration()
-    incorrect_config.token = 'INCORRECT_TOKEN'
-    bkkb_client_incorrect = BKKBClient(incorrect_config)
-    response = bkkb_client_incorrect.get_data('ServiceVersion')
-    assert response.status_code == 401
-    assert response.json().get('message') is not None
+def test_incorrect_token_bkkb(requests_mock, incorrect_client):
+    bkkb_client_incorrect = incorrect_client
+    headers = bkkb_client_incorrect.headers
+    requests_mock.get('http://some_url/ServiceVersion', request_headers=headers, json={"message": None},
+                      status_code=401)
+    assert bkkb_client_incorrect.get_data('ServiceVersion').json().get('message') is None
+    assert bkkb_client_incorrect.get_data('ServiceVersion').status_code == 401
 
 
-def test_last_update():
-    response = bkkb_client.get_last_update()
+def test_last_update(requests_mock, get_last_data_response, correct_client):
+    bkkb_client = correct_client
+    headers = bkkb_client.headers
+    json_request = get_last_data_response
+    requests_mock.get('http://some_url/GetDateTimeLastUpdate', request_headers=headers, json=json_request,
+                      status_code=200)
     now = datetime.datetime.now().strftime('%d/%m/%Y')
-    assert response.status_code == 200
-    assert response.json()[0].get('Day')[2:] == now[2:]
+    assert bkkb_client.get_last_update().json()[0].get('Day')[2:] == now[2:]
+    assert bkkb_client.get_last_update().status_code == 200
 
 
-def test_get_all_families():
-    response = bkkb_client.get_all_values_families()
-    assert response.status_code == 200
-    assert len(response.json()) > 10
+def test_get_all_families(correct_client, requests_mock, get_family_responce):
+    bkkb_client = correct_client
+    headers = bkkb_client.headers
+    json_responce = get_family_responce
+    requests_mock.get('http://some_url/Getfxfamily', request_headers=headers, json=json_responce, status_code=200)
+    client_response = bkkb_client.get_all_values_families()
+    assert client_response.status_code == 200
+    assert len(client_response.json()) > 10
 
-    data_frame = DataFrame(response.json())
+    data_frame = DataFrame(client_response.json())
     ticker_1 = 'Laos Kip'
     ticker_2 = 'INCORRECT_VALUE'
 
@@ -50,15 +55,42 @@ def test_get_all_families():
         get_family(data_frame, ticker_2)
 
 
-def test_last_rate_update():
-    response = bkkb_client.get_last_all_rate_update_for_value(dict(day='02', month='04', year='2023'), 'LAK')
+def test_last_rate_update(correct_client, requests_mock, get_lak_update_rates):
+    bkkb_client = correct_client
+    headers = bkkb_client.headers
+    json_responce = get_lak_update_rates
+    now = datetime.datetime.now()
+    tdd = now.day
+    tmm = now.month
+    tyyyy = now.year
+    fdd = '02'
+    fmm = '04'
+    fyyyy = '2023'
+    lang = 'en'
+    family = 'LAK'
+    requests_mock.get(f'http://some_url/GetChartfxrates/{fdd}/{fmm}/{fyyyy}/{tdd}/{tmm}/{tyyyy}/{family}/{lang}',
+                      request_headers=headers, json=json_responce, status_code=200)
+    response = bkkb_client.get_last_all_rate_update_for_value(dict(day=fdd, month=fmm, year=fyyyy), family)
     assert response.status_code == 200
     assert len(response.json()) > 0
     assert response.json()[0].get('Family') is not None
 
 
-def test_last_rate_update_incorrect_value():
-    ticker_incorrect = 'INCORRECT_VALUE'
-    response = bkkb_client.get_last_all_rate_update_for_value(dict(day='02', month='04', year='2023'), ticker_incorrect)
+def test_last_rate_update_incorrect_value(correct_client, requests_mock):
+    bkkb_client = correct_client
+    headers = bkkb_client.headers
+    json_responce = []
+    now = datetime.datetime.now()
+    tdd = now.day
+    tmm = now.month
+    tyyyy = now.year
+    fdd = '02'
+    fmm = '04'
+    fyyyy = '2023'
+    lang = 'en'
+    family = 'INCORRECT_VALUE'
+    requests_mock.get(f'http://some_url/GetChartfxrates/{fdd}/{fmm}/{fyyyy}/{tdd}/{tmm}/{tyyyy}/{family}/{lang}',
+                      request_headers=headers, json=json_responce, status_code=200)
+    response = bkkb_client.get_last_all_rate_update_for_value(dict(day=fdd, month=fmm, year=fyyyy), family)
     assert response.status_code == 200
     assert len(response.json()) == 0

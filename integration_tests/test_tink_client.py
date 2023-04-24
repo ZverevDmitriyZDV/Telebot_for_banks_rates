@@ -1,5 +1,6 @@
 import pytest
-from tinkoff.invest import AccountStatus, HistoricCandle
+from tinkoff.invest import AccountStatus
+from tinkoff.invest.schemas import HistoricCandle
 
 from pandas import DataFrame
 
@@ -8,13 +9,11 @@ from src.utils.bad_auth_exception import BadAuthException
 from src.config.configurator import TinkBankConfiguration
 
 
-config = TinkBankConfiguration()
-client_tink = TinkoffBankClient(conf=config)
+client_tink = TinkoffBankClient(conf=TinkBankConfiguration())
 
 
 def test_incorrect_token():
-    incorrect_config = TinkBankConfiguration
-    incorrect_config.token = 'Incorrect_token'
+    incorrect_config = TinkBankConfiguration(token='Incorrect_token')
     incorrect_client_tink = TinkoffBankClient(incorrect_config)
     assert incorrect_client_tink.token_name == 'Incorrect_token'
     with pytest.raises(BadAuthException) as e_info:
