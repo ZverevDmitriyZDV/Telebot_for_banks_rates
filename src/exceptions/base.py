@@ -1,0 +1,2 @@
+class BaseZDVException(Exception):
+    pass

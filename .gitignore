@@ -1,2 +1,4 @@
-.env
+environments/.env
 __pycache__
+/logs/
+
