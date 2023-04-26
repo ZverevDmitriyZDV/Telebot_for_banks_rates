@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 from unittest.mock import MagicMock
 
 from src.utils.bad_auth_exception import BadAuthException
-from tests.controllers.test_tink_controller import tink_candles_history
 from src.config.configurator import TinkBankConfiguration
 from src.controllers.usd_contollers.tinkoff_usd_rub_controller import LastUSDToRUBRates
 

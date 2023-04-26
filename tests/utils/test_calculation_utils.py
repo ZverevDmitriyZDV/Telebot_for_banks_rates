@@ -3,8 +3,8 @@ import datetime
 import pytest
 
 from src.utils.calculation_utils import buy_rub_knowing_rub, \
-                                        buy_rub_knowing_thb, cast_money, \
-                                        is_time_to_update
+    buy_rub_knowing_thb, cast_money, \
+    is_time_to_update
 
 
 def test_buy_rub_knowing_rub():
@@ -25,11 +25,12 @@ def test_cast_money():
         def __init__(self, units, nano):
             self.units: int = units
             self.nano: int = nano
+
     assert cast_money(MoneyV(250, 850000000)) == 250.85
     assert cast_money(MoneyV(0, 150)) == 0.00000015
 
 
 def test_is_time_to_update():
-    time = datetime.datetime(2019,12,4)
+    time = datetime.datetime(2019, 12, 4)
     assert is_time_to_update(time=time) == True
     assert is_time_to_update(datetime.datetime.now()) == False

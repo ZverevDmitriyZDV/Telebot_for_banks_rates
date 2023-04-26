@@ -1,5 +1,7 @@
 import datetime
 
+import pytest
+
 from src.config.configurator import ExchangeConvertorConfiguration
 from src.convertor.convertor import ValueRate, ValueData, ExchangeConvertor
 
@@ -119,4 +121,3 @@ def test_get_exchange_message_need_to_update():
     assert convertor.thb_rates.rate != 1
     assert datetime.datetime.now() - convertor.thb_rates._time < datetime.timedelta(minutes=1)
     assert datetime.datetime.now() - convertor.tink_rates._time < datetime.timedelta(minutes=1)
-

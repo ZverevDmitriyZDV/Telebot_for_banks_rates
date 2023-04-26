@@ -1,9 +1,6 @@
-import datetime
 import re
 
 import pytest
-from tinkoff.invest import HistoricCandle, Quotation
-
 from src.controllers.tink_controller import TinkoffDataFrameFormat, CandlesDataFrame
 
 
@@ -31,23 +28,6 @@ def tink_figi_list():
         {'ticker': 'SFZ3', 'figi': 'FUTSPYF12230', 'type': 'futures', 'name': 'SPYF-12.23 S&P 500'},
         {'ticker': 'RLM2', 'figi': 'FUTRUAL06220', 'type': 'futures', 'name': 'RUAL-6.22 РУСАЛ'}
     ]
-
-
-@pytest.fixture
-def tink_candles_history():
-    return [
-        HistoricCandle(open=Quotation(units=35548, nano=0), high=Quotation(units=35548, nano=0),
-                       low=Quotation(units=35548, nano=0), close=Quotation(units=35548, nano=0), volume=1,
-                       time=datetime.datetime(2023, 4, 3, 6, 0, tzinfo=datetime.timezone.utc), is_complete=True),
-        HistoricCandle(open=Quotation(units=35547, nano=0), high=Quotation(units=35753, nano=0),
-                       low=Quotation(units=35547, nano=0), close=Quotation(units=35682, nano=0), volume=18,
-                       time=datetime.datetime(2023, 4, 3, 7, 0, tzinfo=datetime.timezone.utc), is_complete=True),
-        HistoricCandle(open=Quotation(units=35693, nano=0), high=Quotation(units=35693, nano=0),
-                       low=Quotation(units=35693, nano=0), close=Quotation(units=35693, nano=0), volume=1,
-                       time=datetime.datetime(2023, 4, 3, 8, 0, tzinfo=datetime.timezone.utc), is_complete=True),
-        HistoricCandle(open=Quotation(units=35690, nano=0), high=Quotation(units=35839, nano=0),
-                       low=Quotation(units=35690, nano=0), close=Quotation(units=35839, nano=0), volume=8,
-                       time=datetime.datetime(2023, 4, 3, 9, 0, tzinfo=datetime.timezone.utc), is_complete=True)]
 
 
 @pytest.fixture
