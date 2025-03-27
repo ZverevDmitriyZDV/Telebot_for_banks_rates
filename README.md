@@ -33,9 +33,6 @@ Tinkoff Invest: USD/RUB = 92.34 As of: 2024-03-24 12:30:00 MSK
 
 Bangkok Bank: USD/THB = 35.20 As of: 2024-03-24 17:30:00 ICT
 
-yaml
-Копировать код
-
 ---
 
 ### `/reset`
